@@ -13,10 +13,12 @@ Etats possible :
 
 Voiture à l'arrêt phares allumés porte ouverte
 Voiture à l'arrêt phares allumés porte fermée
+
 Voiture à l'arrêt phares éteints porte ouverte
 Voiture à l'arrêt phares éteints porte fermée
+
 Voiture démarrée phares allumés porte ouverte
 Voiture démarrée phares allumés porte fermée
+
 Voiture démarrée phares éteints porte ouverte
 Voiture démarrée phares éteints porte fermée
-
