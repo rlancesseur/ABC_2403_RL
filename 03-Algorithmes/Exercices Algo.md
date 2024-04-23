@@ -119,18 +119,20 @@ Afficher à nouveau la valeur de A puis la valeur de B.
 VARIABLES
     A est un Entier
     B est un Entier
+    C est un Entier
 
 TRAITEMENT
     LIRE A
-    LIRE B
+    LIRE B   
 
 RESULTAT
     ECRIRE A
     ECRIRE B
 
 TRAITEMENT
-    A <-- B
-    B <-- A
+    C = A
+    A = B
+    B = C
 
 RESULTAT
     ECRIRE A
