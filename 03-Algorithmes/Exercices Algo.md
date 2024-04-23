@@ -13,7 +13,7 @@ Le programme affiche “Bonjour “ suivi du prénom saisi.
 
 ```
 VARIABLES
-    prenom est une CHAINE DE CARACTERES
+    prenom est une Chaine de caracteres
 
 TRAITEMENT
     ECRIRE "Saisissez votre prénom"
@@ -24,7 +24,7 @@ Alternative avec contrôle sur la longueur du prénom
 
 ```
 VARIABLES
-    prenom est une CHAINE DE CARACTERES
+    prenom est une Chaine de caracteres
 
 TRAITEMENT
     ECRIRE "Saisissez votre prénom"
@@ -44,9 +44,9 @@ Le programme calcule la moyenne des 2 nombres et affiche le résultat sous forme
 
 ```
 VARIABLES
-    premierNombre est un ENTIER
-    secondeNombre est un ENTIER
-    moyenne est un DECIMAL
+    premierNombre est un Entier
+    secondeNombre est un Entier
+    moyenne est un Decimal
 
 TRAITEMENT
     ECRIRE "Veuillez saisir un premier nombre"
@@ -72,11 +72,68 @@ VARIABLES
     aire est un décimal
     volume est un décimal
 
-Traitement
-    Lire R
-    aire <-- (4 π R²)
-    volume <-- (4 π R³)/3
+TRAITEMENT
+    LIRE R
+    aire <-- (4 * 3.14 * R²)
+    volume <-- (4 * 3.14 * R³)/3
 
-Resultat
-    Ecrire "Son aire = ", aire,
-    Ecrire "Son volume = ", volume,
+RESULTAT
+    ECRIRE "Son aire = ", aire,
+    ECRIRE "Son volume = ", volume,
+```
+
+# Exercice 1.5 : Calcul de la surface d’un secteur circulaire
+
+Lire le rayon R d’un cercle et un angle A (en degré(s)).
+
+Calculer et afficher :
+
+L’ aire du secteur circulaire = (π R² A) / 360
+
+```
+VARIABLES
+    R est un décimal
+    A est un décimal
+    aireSecteurCirculaire est un décimal
+
+TRAITEMENT
+    LIRE R
+    LIRE A
+    aireSecteurCirculaire <-- (3.14 * R² * A) / 360
+
+RESULTAT
+    ECRIRE "L'aire du secteur circulaire = ", aireSecteurCirculaire,
+```
+
+# Exercice 1.6 : Inversion de 2 valeurs
+
+Lire 2 nombres entier A et B.
+
+Afficher la valeur de A puis la valeur de B.
+
+Mettre le contenu de A dans B et celui de B dans A.
+
+Afficher à nouveau la valeur de A puis la valeur de B.
+
+```
+VARIABLES
+    A est un Entier
+    B est un Entier
+
+TRAITEMENT
+    LIRE A
+    LIRE B
+
+RESULTAT
+    ECRIRE A
+    ECRIRE B
+
+TRAITEMENT
+    A <-- B
+    B <-- A
+
+RESULTAT
+    ECRIRE A
+    ECRIRE B
+```
+
