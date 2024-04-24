@@ -125,9 +125,9 @@ TRAITEMENT
     LIRE A
     LIRE B   
 
-    C = A
-    A = B
-    B = C
+    C <-- A
+    A <-- B
+    B <-- C
 
 RESULTAT
     ECRIRE A
