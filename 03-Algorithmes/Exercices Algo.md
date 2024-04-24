@@ -125,11 +125,6 @@ TRAITEMENT
     LIRE A
     LIRE B   
 
-RESULTAT
-    ECRIRE A
-    ECRIRE B
-
-TRAITEMENT
     C = A
     A = B
     B = C
