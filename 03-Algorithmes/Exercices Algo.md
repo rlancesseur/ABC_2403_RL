@@ -175,3 +175,39 @@ TRAITEMENT
         ECRIRE "Le nombre est négatif"
 ```
 
+# Exercice 2.3
+
+Écrire un algorithme qui demande à l’utilisateur de saisir un âge et l’informe ensuite à quelle catégorie il appartient 
+
+```
+VARIABLES
+    age est un Entier
+
+TRAITEMENT
+    ECRIRE "Veuillez saisir votre âge"
+    LIRE age
+
+    SI age < 5 ALORS
+        ECRIRE "Vous être Trop jeune"
+    SI age >=5 et <=6 ALORS
+        ECRIRE "Vous êtes Débutant"
+    SI age >=7 et <=8 ALORS
+        ECRIRE "Vous êtes Poussin"
+    SI age >=9 et <=10 ALORS
+        ECRIRE "Vous êtes Benjamin"
+    SI age >=11 et <=12 ALORS
+        ECRIRE "Vous êtes Pupille"
+    SI age >=13 et <=14 ALORS
+        ECRIRE "Vous êtes Minime"
+    SI age >=15 et <=16 ALORS
+        ECRIRE "Vous êtes Cadet"
+    SI age >=17 et <=18 ALORS
+        ECRIRE "Vous êtes Junior"
+    SI age >=19 et <=34 ALORS
+        ECRIRE "Vous êtes Sénior"
+    SINON
+        ECRIRE "Vous êtes Vétéran"
+    ```
+
+    
+    
