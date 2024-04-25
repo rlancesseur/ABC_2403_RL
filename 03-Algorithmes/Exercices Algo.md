@@ -150,3 +150,28 @@ TRAITEMENT
     SINON
         ECRIRE "Le nombre est négatif"
 ```
+
+# Exercice 2.2
+
+Écrire un algorithme qui demande à l’utilisateur de saisir 2 nombres entiers et l’informe ensuite si leur produit est positif ou négatif.
+
+```
+VARIABLES
+    nombreEntier1 est un Entier
+    nombreEntier2 est un Entier
+    produit est un Entier
+
+TRAITEMENT
+    ECRIRE "Saisir un nombre entier"
+    LIRE nombreEntier1
+    ECRIRE "Saisir un second nombre entier"
+    Lire nombreEntier2
+    
+    produit <-- (nombreEntier1 * nombreEntier2)
+
+    SI produit >= 0 ALORS
+        ECRIRE "Le nombre est positif"
+    SINON
+        ECRIRE "Le nombre est négatif"
+    ```
+    
