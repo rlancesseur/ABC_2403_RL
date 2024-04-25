@@ -173,5 +173,5 @@ TRAITEMENT
         ECRIRE "Le nombre est positif"
     SINON
         ECRIRE "Le nombre est négatif"
-    ```
-    
+```
+
