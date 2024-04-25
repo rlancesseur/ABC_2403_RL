@@ -30,7 +30,7 @@ public class App {
 		secondNombre = sc.nextInt();
 		
 		
-		moyenne = (premierNombre + secondNombre) / 2;
+		moyenne = (premierNombre + secondNombre) / 2F; // F pour préciser que 2 est un float, (alors que c'était un double)
 		
 		
 		System.out.println("La moyenne de " + premierNombre + " et " + secondNombre + " est " + moyenne);
