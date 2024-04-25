@@ -1,6 +1,7 @@
 package calculAireVolumeSphere;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class App {
 
@@ -19,16 +20,16 @@ public class App {
 		sc = new Scanner(System.in);
 		
 		
-		System.out.println("Veuillez saire le rayon de la spere");
-		rayon = sc.nextInt();
+		System.out.println("Veuillez saisir le rayon de la sphere");
+		rayon = sc.nextDouble();
 		
-		aire = (4 * 3.14 * (rayon*rayon));
-		volume = (4 * 3.14 * (rayon*rayon*rayon)) / 3;
+		aire = (4.0 * Math.PI * Math.pow(rayon, 2));
+		volume = (4.0 * Math.PI * Math.pow(rayon, 3)) / 3.0;
 		
 		
 		System.out.println("Son aire = " + aire);
 		
-		System.out.println("Son volume " + volume);
+		System.out.println("Son volume = " + volume);
 		
 		sc.close();
 
