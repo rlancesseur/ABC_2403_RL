@@ -19,9 +19,18 @@ public class App {
 		prenom = sc.nextLine(); // Demande à l'utilisateur une saisie. 
 		                        // Lorsque l'utilisateur validera avec la touche Entrée, la saisie est récupéré à gauche du signe "="
 		
-		System.out.println("Bonjour " + prenom); // Affichage
 		
-		sc.close(); // Fermeture du scanner (OBLIGATOIRE)
+		
+		if(prenom.length() > 0) {
+		
+		System.out.println("Bonjour " + prenom);
+		}
+		
+		else {
+			System.out.println("Veuillez saisir un prénom valide");
+		}
+		
+		sc.close();
 		
 	}
 
