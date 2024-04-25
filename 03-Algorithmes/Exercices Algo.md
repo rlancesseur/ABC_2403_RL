@@ -134,3 +134,19 @@ RESULTAT
     ECRIRE B
 ```
 
+# Exercice 2.1
+
+Écrire un algorithme qui demande à l’utilisateur de saisir 1 nombre entier et l’informe ensuite si le nombre est positif ou négatif.
+
+```
+VARIABLES
+    nombreEntier est un Entier
+
+TRAITEMENT
+    ECRIRE "Saisir un nombre entier"
+    LIRE nombreEntier
+    SI nombreEntier >= 0 ALORS
+        ECRIRE "Le nombre est positif"
+    SINON
+        ECRIRE "Le nombre est négatif"
+```
