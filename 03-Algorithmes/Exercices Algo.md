@@ -189,25 +189,52 @@ TRAITEMENT
 
     SI age < 5 ALORS
         ECRIRE "Vous être Trop jeune"
-    SI age >=5 et <=6 ALORS
+    SI 5 < age > 6 ALORS
         ECRIRE "Vous êtes Débutant"
-    SI age >=7 et <=8 ALORS
+    SI 7 < age > 8 ALORS
         ECRIRE "Vous êtes Poussin"
-    SI age >=9 et <=10 ALORS
+    SI 9 < age > 10 ALORS
         ECRIRE "Vous êtes Benjamin"
-    SI age >=11 et <=12 ALORS
+    SI 11 < age > 12 ALORS
         ECRIRE "Vous êtes Pupille"
-    SI age >=13 et <=14 ALORS
+    SI 13 < age > 14 ALORS
         ECRIRE "Vous êtes Minime"
-    SI age >=15 et <=16 ALORS
+    SI 15 < age > 16 ALORS
         ECRIRE "Vous êtes Cadet"
-    SI age >=17 et <=18 ALORS
+    SI 17 < age > 18 ALORS
         ECRIRE "Vous êtes Junior"
-    SI age >=19 et <=34 ALORS
+    SI 19 < age > 34 ALORS
         ECRIRE "Vous êtes Sénior"
     SINON
         ECRIRE "Vous êtes Vétéran"
-    ```
+```
 
-    
-    
+Avec SWITCH :
+
+```
+VARIABLES
+    age est un ENTIER
+    tropJeune est un ENTIER
+    debutant est un ENTIER
+    poussin est un ENTIER
+    benjamin est un ENTIER
+    pupille est un ENTIER
+    minime est un ENTIER
+    cadet est un ENTIER
+    junior est un ENTIER
+    senior est un ENTIER
+
+TRAITEMENT
+    ECRIRE "Veuiller saisir votre âge"
+    LIRE age
+
+    Dans le cas ou age
+        est egal à tropJeune ECRIRE "Vous êtes trop jeune"
+        est egal à debutant ECRIRE "Vous êtes débutant"
+        est egal à poussin ECRIRE "Vous êtes poussin"
+        est egal à benjamin ECRIRE "Vous êtes benjamin"
+        est egal à pupille ECRIRE "Vous êtes pupille"
+        est egal à minime ECRIRE "Vous êtes minime"
+        est egale à cadet ECRIRE "Vous êtes cadet"
+        est egale à junior ECRIRE "Vous êtes junior"
+        est egale à senior ECRIRE "Vous êtes senior"
