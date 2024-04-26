@@ -23,9 +23,9 @@ public class App {
 		nombreA = nombreB;
 		nombreB = nombreC;
 		
-		System.out.println(nombreA);
-		System.out.println(nombreB);
-		
+		System.out.println("A devient B : " + nombreA);
+		System.out.println("B devient A : " + nombreB);
+
 		sc.close();
 
 		
