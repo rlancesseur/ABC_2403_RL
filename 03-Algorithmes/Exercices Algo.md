@@ -134,7 +134,7 @@ RESULTAT
     ECRIRE B
 ```
 
-# Exercice 2.1
+# Exercice 2.1 : Positif ou Négatif ?
 
 Écrire un algorithme qui demande à l’utilisateur de saisir 1 nombre entier et l’informe ensuite si le nombre est positif ou négatif.
 
@@ -151,7 +151,7 @@ TRAITEMENT
         ECRIRE "Le nombre est négatif"
 ```
 
-# Exercice 2.2
+# Exercice 2.2 : Positif ou Négatif (bis) ?
 
 Écrire un algorithme qui demande à l’utilisateur de saisir 2 nombres entiers et l’informe ensuite si leur produit est positif ou négatif.
 
@@ -175,7 +175,7 @@ TRAITEMENT
         ECRIRE "Le nombre est négatif"
 ```
 
-# Exercice 2.3
+# Exercice 2.3 : Ma catégorie au Football
 
 Écrire un algorithme qui demande à l’utilisateur de saisir un âge et l’informe ensuite à quelle catégorie il appartient 
 
@@ -212,6 +212,31 @@ TRAITEMENT
 ```
 
 
-# Exercice 2.4
+# Exercice 2.4 : Je prédis l'avenir
+
+Le programme demande à l’utilisateur de saisir 2 nombres entiers correspondant respectivement à des heures et des minutes. Le programme affichera ensuite l’heure qu’il sera 3 minutes plus tard.
+
+Par exemple, si l’utilisateur saisit 23 puis 12 (correspondant à 23h12), le programme doit afficher Dans 3 minutes, il sera 23h15.
+
+Si les nombres saisis par l’utilisateur sont “hors limite”, le programme affichera “Les données saisies sont invalides”
 
 ```
+VARIABLES
+    heures est un ENTIER
+    minutes est un ENTIER
+    plus3Minutes est un ENTIER
+
+TRAITEMENT
+    ECRIRE "Veuillez saisir l'heure"
+    LIRE heure
+    ECRIRE "Veuillez saisir les minutes"
+    LIRE minutes
+
+    plus3Minutes <-- (minutes + 3)
+
+    Si minute > 57
+        Alors heures + 1
+
+    ECRIRE "Dans 3 minutes, il sera ", heures, "h ", plus3Minutes, ". "
+```
+
