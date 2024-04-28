@@ -182,33 +182,34 @@ TRAITEMENT
 ```
 VARIABLES
     age est un Entier
+    categorie est un STRING
 
 TRAITEMENT
     ECRIRE "Veuillez saisir votre âge"
     LIRE age
 
-    SI age < 5 ALORS
-        LIRE age
-    SI 5 < age > 6 ALORS
-        LIRE age
-    SI 7 < age > 8 ALORS
-        LIRE age
-    SI 9 < age > 10 ALORS
-        LIRE age
-    SI 11 < age > 12 ALORS
-        LIRE age
-    SI 13 < age > 14 ALORS
-        LIRE age
-    SI 15 < age > 16 ALORS
-        LIRE age
-    SI 17 < age > 18 ALORS
-        LIRE age
-    SI 19 < age > 34 ALORS
-        LIRE age
+    SI age <= 5 ALORS
+        categorie = Trop jeune
+    SI age <= 6 ALORS
+        categorie = Débutant
+    SI age <= 8 ALORS
+        categorie = poussin
+    SI age <= 10 ALORS
+        categorie = benjamin
+    SI age <= 12 ALORS
+        categorie = pupille
+    SI age <= 14 ALORS
+        categorie = minime
+    SI age <= 16 ALORS
+        categorie = cadet
+    SI age <= 18 ALORS
+        categorie = junior
+    SI age <= 34 ALORS
+        categorie = sénior
     SINON
-        LIRE age
+        categorie = vétéran
 
-    ECRIRE "Vous êtes dans la catégorie "
+    ECRIRE "Vous êtes dans la catégorie ", categorie
 ```
 
 
@@ -232,9 +233,13 @@ TRAITEMENT
     ECRIRE "Veuillez saisir les minutes"
     LIRE minutes
 
+    SI 0 > heure > 23 OU 0 > minutes > 59
+        ECRIRE "Les données saisies sont invalides"
+
+
     plus3Minutes <-- (minutes + 3)
 
-    Si minute > 57
+    SI minute > 57
         Alors heures + 1
 
     ECRIRE "Dans 3 minutes, il sera ", heures, "h ", plus3Minutes, ". "
