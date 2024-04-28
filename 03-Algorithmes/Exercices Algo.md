@@ -239,8 +239,9 @@ TRAITEMENT
 
     plus3Minutes <-- (minutes + 3)
 
-    SI minute > 57
-        Alors heures + 1
+    SI plus3Minute > 59
+        Alors plus3Minutes -= 60
+              heures + 1
 
     ECRIRE "Dans 3 minutes, il sera ", heures, "h ", plus3Minutes, ". "
 ```
