@@ -23,7 +23,7 @@ public class App {
 		if (heures > 23) {
 			System.out.println("Les données saisie sont invalides");
 		}
-			else if (minutes > 68) {
+			else if (minutes > 59) {
 			System.out.println("Les données saisies sont invalides");
 			}
 				else {
