@@ -33,7 +33,15 @@ public class App {
 					System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
 				}
 				
-					else {
+					else if (heures > 23) {
+					heures = 0;
+					plus3Minutes -= 60;
+					
+					System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
+						
+					}
+				
+						else {
 						System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
 				}
 		
