@@ -34,12 +34,13 @@ public class App {
 					plusHeures += 1;
 				}
 				
-					else if (plusHeures > 23) {
+				if (plusHeures > 23) {
 					plusHeures = 0;	
 					}
 				
-			
 						System.out.println("Dans 3 minutes, il sera " + plusHeures + "h " + plus3Minutes);
+						
+						
 				
 		
 		sc.close();
