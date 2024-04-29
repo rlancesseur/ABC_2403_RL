@@ -22,6 +22,7 @@ public class App {
 		
 		if (heures > 23 || heures < 0 || minutes > 59 || minutes < 0) {
 			System.out.println("Les données saisies sont invalides");
+			return;
 		}
 			
 		plus3Minutes = minutes + 3;

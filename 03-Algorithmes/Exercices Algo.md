@@ -254,3 +254,19 @@ Un magasin proposant un service de Réprographie facture 0.10€ les 10 premièr
 
 ```
 VARIABLES
+nombrePhotocopies est un ENTIER
+facture est un ENTIER
+
+TRAITEMENT
+ECRIRE "Veuillez saisir le nombre de photocopies"
+LIRE nombrePhotocopies
+
+SI nombrePhotocopies <= 10
+    ALORS facture = nombrePhotocopies * 0.10
+SI nombrePhotocopies > 10 OU <=30 
+    ALORS facture = (10 * 0.10) + (nombrePhotocopies - 10) * 0.09
+SI nombrePhotocopies > 30
+    ALORS facture = (10 * 0.10) + (20 * 0.09) + (nombrePhotocopies - 30) * 0.08
+
+ECRIRE "Le montant à payer est de : ", facture, " €."
+```
