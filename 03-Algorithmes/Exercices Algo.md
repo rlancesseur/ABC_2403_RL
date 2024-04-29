@@ -239,9 +239,12 @@ TRAITEMENT
 
     plus3Minutes <-- (minutes + 3)
 
-    SI plus3Minute > 59
+    SI plus3Minute > 60
         Alors plus3Minutes -= 60
-              heures + 1
+              heures + 
+              
+    SI heures > 23
+        Alors heures = 0
 
     ECRIRE "Dans 3 minutes, il sera ", heures, "h ", plus3Minutes, ". "
 ```
@@ -264,9 +267,9 @@ LIRE nombrePhotocopies
 SI nombrePhotocopies <= 10
     ALORS facture = nombrePhotocopies * 0.10
 SI nombrePhotocopies > 10 OU <=30 
-    ALORS facture = (10 * 0.10) + (nombrePhotocopies - 10) * 0.09
+    ALORS facture = nombrePhotocopies * 0.09 + 1
 SI nombrePhotocopies > 30
-    ALORS facture = (10 * 0.10) + (20 * 0.09) + (nombrePhotocopies - 30) * 0.08
+    ALORS facture = nombrePhotocopies * 0.08 + 2.80
 
 ECRIRE "Le montant à payer est de : ", facture, " €."
 ```
