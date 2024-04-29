@@ -8,7 +8,7 @@ public class App {
 		
 
 		int nombrePhotocopies;
-		double facture;
+		double facture = 0;
 		Scanner sc = new Scanner(System.in);
 		
 		
@@ -21,11 +21,11 @@ public class App {
 		}
 			
 			else if (nombrePhotocopies > 10 && nombrePhotocopies <= 30) {
-				facture = (nombrePhotocopies * 0.09) + 1;
+				facture = (10 * 0.10) + (nombrePhotocopies - 10) * 0.09; 
 			}
 				
 			else if (nombrePhotocopies > 30) {
-				facture = (nombrePhotocopies * 0.08) + 2.8;
+				facture = (10 * 0.10) + (20 * 0.09) + (nombrePhotocopies - 30) * 0.08;
 			}
 					
 					System.out.println("Le montant à payer est de : " + facture + " €.");
