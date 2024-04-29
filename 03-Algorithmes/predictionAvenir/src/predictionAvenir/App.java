@@ -21,14 +21,20 @@ public class App {
 		
 		
 		if (heures > 23 || heures < 0 || minutes > 59 || minutes < 0) {
-			System.out.println("Les données saisie sont invalides");
+			System.out.println("Les données saisies sont invalides");
 		}
-
-				else {
-					
-				plus3Minutes = minutes + 3;
 			
-				System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
+		plus3Minutes = minutes + 3;
+		
+				if (plus3Minutes > 59) {
+					plus3Minutes -= 60;
+					heures += 1;
+					
+					System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
+				}
+				
+					else {
+						System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
 				}
 		
 		sc.close();
