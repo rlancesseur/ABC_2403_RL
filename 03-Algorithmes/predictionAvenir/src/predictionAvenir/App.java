@@ -9,7 +9,6 @@ public class App {
 		int heures;
 		int minutes;
 		int plus3Minutes;
-		int plusHeures;
 		Scanner sc;
 		
 		sc = new Scanner(System.in);
@@ -23,24 +22,22 @@ public class App {
 		
 		if (heures > 23 || heures < 0 || minutes > 59 || minutes < 0) {
 			System.out.println("Les données saisies sont invalides");
-			return;
-		}
+		} else {
 			
 		plus3Minutes = minutes + 3;
-		plusHeures = heures;
 		
 				if (plus3Minutes > 60) {
 					plus3Minutes -= 60;
-					plusHeures += 1;
+					heures += 1;
 				}
 				
-				if (plusHeures > 23) {
-					plusHeures = 0;	
+				if (heures > 23) {
+					heures = 0;	
 					}
 				
-						System.out.println("Dans 3 minutes, il sera " + plusHeures + "h " + plus3Minutes);
+						System.out.println("Dans 3 minutes, il sera " + heures + "h " + plus3Minutes);
 						
-						
+		}
 				
 		
 		sc.close();

@@ -241,7 +241,7 @@ TRAITEMENT
 
     SI plus3Minute > 60
         Alors plus3Minutes -= 60
-              heures + 
+              heures += 1
               
     SI heures > 23
         Alors heures = 0
