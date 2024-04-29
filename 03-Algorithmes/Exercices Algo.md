@@ -255,7 +255,7 @@ Un magasin proposant un service de Réprographie facture 0.10€ les 10 premièr
 ```
 VARIABLES
 nombrePhotocopies est un ENTIER
-facture est un ENTIER
+facture est un DECIMAL
 
 TRAITEMENT
 ECRIRE "Veuillez saisir le nombre de photocopies"
