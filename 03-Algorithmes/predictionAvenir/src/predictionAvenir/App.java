@@ -9,6 +9,7 @@ public class App {
 		int heures;
 		int minutes;
 		int plus3Minutes;
+		int plusHeures;
 		Scanner sc;
 		
 		sc = new Scanner(System.in);
@@ -26,25 +27,20 @@ public class App {
 		}
 			
 		plus3Minutes = minutes + 3;
+		plusHeures = heures;
 		
-				if (plus3Minutes > 59) {
+				if (plus3Minutes > 60) {
 					plus3Minutes -= 60;
-					heures += 1;
-					
-					System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
+					plusHeures += 1;
 				}
 				
-					else if (heures > 23) {
-					heures = 0;
-					plus3Minutes -= 60;
-					
-					System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
-						
+					else if (plusHeures > 23) {
+					plusHeures = 0;	
 					}
 				
-						else {
-						System.out.println("Dans 3 minutes, il sera " + heures + " h " + plus3Minutes);
-				}
+			
+						System.out.println("Dans 3 minutes, il sera " + plusHeures + "h " + plus3Minutes);
+				
 		
 		sc.close();
 
