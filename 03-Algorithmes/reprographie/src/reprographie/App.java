@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class App {
 
+	final static double P1 = 0.10;
+	final static double P2 = 0.09;
+	final static double P3 = 0.08;
+	
 	public static void main(String[] args) {
 		
 
@@ -17,15 +21,15 @@ public class App {
 		
 		
 		if (nombrePhotocopies <= 10) {
-			facture = nombrePhotocopies * 0.10;			
+			facture = nombrePhotocopies * App.P1;			
 		}
 			
-			else if (nombrePhotocopies > 10 && nombrePhotocopies <= 30) {
-				facture = (10 * 0.10) + (nombrePhotocopies - 10) * 0.09; 
+			else if (nombrePhotocopies <= 30) {
+				facture = (10 * App.P1) + (nombrePhotocopies - 10) * App.P2; 
 			}
 				
 			else if (nombrePhotocopies > 30) {
-				facture = (10 * 0.10) + (20 * 0.09) + (nombrePhotocopies - 30) * 0.08;
+				facture = (10 * App.P1) + (20 * App.P2) + (nombrePhotocopies - 30) * App.P3;
 			}
 					
 					System.out.println("Le montant à payer est de : " + facture + " €.");

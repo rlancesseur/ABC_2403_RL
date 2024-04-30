@@ -256,6 +256,11 @@ Un magasin proposant un service de Réprographie facture 0.10€ les 10 premièr
 Écrire l’algorithme qui demande à l’utilisateur de saisir le nombre de photocopies effectuées et affiche le montant de la facture correspondante.
 
 ```
+CONSTANTE
+P1 est un REEL <-- 0.10
+P2 est un REEL <-- 0.09
+P3 est un REEL <-- 0.08
+
 VARIABLES
 nombrePhotocopies est un ENTIER
 facture est un DECIMAL
@@ -265,11 +270,11 @@ ECRIRE "Veuillez saisir le nombre de photocopies"
 LIRE nombrePhotocopies
 
 SI nombrePhotocopies <= 10
-    ALORS facture = nombrePhotocopies * 0.10
-SI nombrePhotocopies > 10 OU <=30 
-    ALORS facture = (10 * 0.10) + (nombrePhotocopies - 10) * 0.09
+    ALORS facture = nombrePhotocopies * P1
+SI nombrePhotocopies <=30 
+    ALORS facture = (10 * P1) + (nombrePhotocopies - 10) * P2
 SI nombrePhotocopies > 30
-    ALORS facture = (10 * 0.10) + (20 * 0.09) + (nombrePhotocopies - 30) * 0.08
+    ALORS facture = (10 * P1) + (20 * P2) + (nombrePhotocopies - 30) * P3
 
 ECRIRE "Le montant à payer est de : ", facture, " €."
 ```
@@ -333,10 +338,10 @@ Ecrire l’algorithme permettant de saisir les données nécessaires (sans contr
 
 ```
 VARIABLES
-conducteur est un STRING
 age = 25 est un ENTIER
 permis = 2 est un ENTIER
 accident est un ENTIER
+tempsAssure est un ENTIER
 tarif est un STRING
 
 TRAITEMENT
@@ -346,20 +351,25 @@ ECRIRE "Depuis combien de temps avez-vous le permis"
 LIRE permis
 ECRIRE "Avez-vous déjà eu un accident, si oui, combien"
 LIRE accident
+ECRIRE "Depuis combien de temps êtes vous assuré"
+LIRE tempsAssure
 
 SI conducteur = age < 25 ET permis < 2 ET accident = 0
     ALORS tarif = rouge
-    SINON ECRIRE "La compagnie refuse de vous assurer"
 SI conducteur = age < 25 ET permis > 2 ET accident = 0 
     ALORS tarif = orange
         SINON SI age > 25 ET permis < 2 ET accident = 1
         ALORS tarif = rouge
-            SINON ECRIRE "La compagnie refuse de vous assurer"
 SI conducteur = age > 25 ET permis > 2 ET accident = 0
     ALORS tarif = vert
         SINON SI age > 25 ET permis > 2 ET accident = 1
         ALORS tarif = orange
             SINON SI age > 25 ET permis > 2 ET accident = 2
             ALORS tarif = rouge
-                SINON ECRIRE "La compagnie refuse de vous assurer"
+                SINON
+                    ECRIRE "La compagnie refuse de vous assurer"
+
+ECRIRE "La compagnie vous attribue le tarif " + tarif"
+```
+
     
