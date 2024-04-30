@@ -333,5 +333,33 @@ Ecrire l’algorithme permettant de saisir les données nécessaires (sans contr
 
 ```
 VARIABLES
+conducteur est un STRING
+age = 25 est un ENTIER
+permis = 2 est un ENTIER
+accident est un ENTIER
+tarif est un STRING
 
+TRAITEMENT
+ECRIRE "Saisir âge"
+LIRE age
+ECRIRE "Depuis combien de temps avez-vous le permis"
+LIRE permis
+ECRIRE "Avez-vous déjà eu un accident, si oui, combien"
+LIRE accident
 
+SI conducteur = age < 25 ET permis < 2 ET accident = 0
+    ALORS tarif = rouge
+    SINON ECRIRE "La compagnie refuse de vous assurer"
+SI conducteur = age < 25 ET permis > 2 ET accident = 0 
+    ALORS tarif = orange
+        SINON SI age > 25 ET permis < 2 ET accident = 1
+        ALORS tarif = rouge
+            SINON ECRIRE "La compagnie refuse de vous assurer"
+SI conducteur = age > 25 ET permis > 2 ET accident = 0
+    ALORS tarif = vert
+        SINON SI age > 25 ET permis > 2 ET accident = 1
+        ALORS tarif = orange
+            SINON SI age > 25 ET permis > 2 ET accident = 2
+            ALORS tarif = rouge
+                SINON ECRIRE "La compagnie refuse de vous assurer"
+    
