@@ -273,3 +273,45 @@ SI nombrePhotocopies > 30
 
 ECRIRE "Le montant à payer est de : ", facture, " €."
 ```
+
+# Exercice 2.6 : Elections
+
+Les élections législatives, en Guignolerie Septentrionale, obéissent à la règle suivante :
+
+Lorsque l’un des candidats obtient plus de 50% des suffrages, il est élu dès le premier tour.
+En cas de deuxième tour, peuvent participer uniquement les candidats ayant obtenu au moins 12.5% des voix au premier tour.
+Vous devez écrire un algorithme qui permet la saisie des scores de quatre candidats au premier tour.
+
+Cet algorithme traitera ensuite le candidat numéro 1 (et uniquement lui) : il dira s’il est élu, battu, s’il se trouve en ballottage favorable (il participe au second tour en étant arrivé en tête à l’issue du premier tour) ou défavorable (il participe au second tour sans avoir été en tête au premier tour).
+
+```
+VARIABLES
+premierCandidat est un DECIMAL
+deuxiemeCandidat est un DECIMAL
+troisiemeCandidat est un DECIMAL
+quatriemeCandidat est un DECIMAL
+totalVote est un DECIMAL
+
+TRAITEMENT
+ECRIRE "Score du premier candidat"
+LIRE premierCandidat
+ECRIRE "Score du deuxieme candidat"
+LIRE deuxiemeCandidat
+ECRIRE "Score du troisieme candidat"
+LIRE troisiemeCandidat
+ECRIRE "Scrore du quatrieme candidat"
+LIRE quatrieme candidat"
+
+totalVote <-- premierCandidat + deuxiemeCandidat + troisiemeCandidat + quatriemeCandidat
+
+SI premierCandidat > totalVote / 2
+    ALORS ECRIRE "Le candidat numéro 1 est élu dès le premier tour"
+SI premierCandidat < totalVote * 0.12
+    ALORS ECRIRE "Le candidat numéro 1 a perdu l'élection"
+SI premierCandidat > totalVote *0.12 && > totalVote / 4
+    ALORS ECRIRE "Le candidat numéro 1 est en ballottage favorable"
+SI premierCandidat > totalVote * 0.12 && < totalVote / 4
+    ALORS ECRIRE "Le candidat numéro 1 est en ballottage défavorable"
+```
+
+
