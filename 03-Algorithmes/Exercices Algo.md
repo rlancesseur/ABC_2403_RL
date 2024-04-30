@@ -241,7 +241,7 @@ TRAITEMENT
 
     SI plus3Minute > 60
         Alors plus3Minutes -= 60
-              heures + 
+              heures += 1
               
     SI heures > 23
         Alors heures = 0
@@ -267,9 +267,9 @@ LIRE nombrePhotocopies
 SI nombrePhotocopies <= 10
     ALORS facture = nombrePhotocopies * 0.10
 SI nombrePhotocopies > 10 OU <=30 
-    ALORS facture = nombrePhotocopies * 0.09 + 1
+    ALORS facture = (10 * 0.10) + (nombrePhotocopies - 10) * 0.09
 SI nombrePhotocopies > 30
-    ALORS facture = nombrePhotocopies * 0.08 + 2.80
+    ALORS facture = (10 * 0.10) + (20 * 0.09) + (nombrePhotocopies - 30) * 0.08
 
 ECRIRE "Le montant à payer est de : ", facture, " €."
 ```
