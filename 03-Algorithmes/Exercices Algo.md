@@ -372,4 +372,52 @@ SI conducteur = age > 25 ET permis > 2 ET accident = 0
 ECRIRE "La compagnie vous attribue le tarif " + tarif"
 ```
 
+# Exercice 2.8 : Validité d'une date
+
+Écrivez un algorithme qui demande à l’utilisateur de saisir 3 nombres entiers
+
+Un numéro de jour
+Un numéro de mois
+Un numéro d’année
+L’algorithme indique ensuite s’il s’agit ou non d’une date valide.
+
+Il n’est sans doute pas inutile de rappeler rapidement que le mois de février compte 28 jours, sauf si l’année est bissextile, auquel cas il en compte 29.
+
+L’année est bissextile si elle est divisible par quatre. Toutefois, les années divisibles par 100 ne sont pas bissextiles, mais les années divisibles par 400 le sont. Ouf !
+
+```
+VARIABLES
+jour est un ENTIER
+mois est un ENTIER
+annee est un ENTIER
+date est un BOOLEEN
+
+TRAITEMENT
+ECRIRE "Saisir numéro jour"
+LIRE jour
+ECRIRE "Saisir numéro mois"
+LIRE mois
+ECRIRE "Saisir numéro année"
+LIRE annee
+
+date <-- jour >= 1 && jour <= 31 && mois >= 1 && mois <= 12
+
+    SI (jour <= 30)
+    Dans le cas 2, 4, 6, 9, 11
+    ALORS date = vrai
+        SINON SI (jour < 28)
+        Dans le cas 2
+        ALORS date = vrai
+            SINON SI (jour < 29) \* année bissextile divisible par 4 \*
+            Dans le cas 2
+            ALORS date = vrai
+
+        SINON date = faux
+
+    SI date = vrai
+    ALORS ECRIRE "Il s'agit d'une date valide"
+        SINON ECRIRE "Il ne s'agit pas d'une date valide"
+```
+
+
     
