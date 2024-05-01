@@ -22,39 +22,37 @@ public class App {
 		System.out.println("Depuis combien de temps êtes vous assuré");
 		tempsAssure = sc.nextInt();
 		
-		if (age < 25 && permis < 2 && accident == 0) {
-			tarif = "rouge";
-		}
+
+
+			if (age > 25 && permis > 2 && accident == 0) {
+				tarif = "vert";
+			}
 			else if (age < 25 && permis > 2 && accident == 0) {
 				tarif = "orange";
-			}
-			else if (age < 25 && permis < 2 && accident == 1) {
-				tarif = "rouge";
-			}
-			else if (age > 25 && permis > 2 && accident == 0) {
-				tarif = "vert";
 			}
 			else if (age > 25 && permis > 2 && accident == 1) {
 				tarif = "orange";
 			}
-			else if (age > 25 && permis > 2 && accident == 2) {
+			else if (accident <=2) {
 				tarif = "rouge";
-			}				
-		
+			}
+				
 			else {
 				System.out.println("La compagnie refuse de vous assurer");
 			}
-		
-		System.out.println("La compagnie vous attribue le tarif " + tarif);
 				
 			
-		if (tempsAssure > 5) {
-			System.out.println("Vous êtes un ancien, c'est moins chère");
-		}
+	/*	if (tempsAssure > 5) {
+			tarif "rouge" = tarif "orange";
+			tarif "orange" = tarif "vert";
+			tarif "vert" = tarif "bleu"; 
+		} 
+	*/
 		
+		System.out.println("La compagnie vous attribue le tarif " + tarif);	
 		
 		sc.close();
-		
+			
 	}
 
 }
