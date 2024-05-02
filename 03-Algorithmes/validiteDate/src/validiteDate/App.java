@@ -18,14 +18,22 @@ public class App {
 		System.out.println("Saisir l'année");
 		annee = sc.nextInt();
 		
-		 if (jour < 1 && jour > 31 && mois < 1 && mois > 12) {
+		 if (jour < 1 || jour > 31 || mois < 1 || mois > 12) {
 			System.out.println("Il ne s'agit pas d'une date valide");
 		}
 		 else if (jour > 30) {
 			 switch (mois) {
 			 case 2, 4, 6, 9, 11 : System.out.println("Il ne s'agit pas d'une date valide");
+			 break;
+			 default : System.out.println("Il s'agit d'une date valide");
 			 }
 		 }
+		 else if (jour > 28) {
+			 switch (mois) {
+			 case 2 : System.out.println("Il ne s'agit pas d'une date valide");
+			 }
+		 }
+		 
 		 else {
 			System.out.println("Il s'agit d'une date valide");
 		}
