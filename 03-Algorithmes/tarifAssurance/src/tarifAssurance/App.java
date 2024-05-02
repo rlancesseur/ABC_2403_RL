@@ -24,16 +24,22 @@ public class App {
 		
 
 
-			if (age > 25 && permis > 2 && accident == 0) {
-				tarif = "vert";
+			if (age < 25 && permis < 2 && accident == 0) {
+				tarif = "rouge";
 			}
 			else if (age < 25 && permis > 2 && accident == 0) {
 				tarif = "orange";
 			}
+			else if (age > 25 && permis < 2 && accident == 1) {
+				tarif = "rouge";
+			}
+			else if (age > 25 && permis > 2 && accident == 0) {
+				tarif = "vert";
+			}
 			else if (age > 25 && permis > 2 && accident == 1) {
 				tarif = "orange";
 			}
-			else if (accident <=2) {
+			else if (age > 25 && permis > 2 && accident == 2) {
 				tarif = "rouge";
 			}
 				
