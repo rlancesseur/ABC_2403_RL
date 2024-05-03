@@ -233,9 +233,10 @@ TRAITEMENT
     ECRIRE "Veuillez saisir les minutes"
     LIRE minutes
 
-    SI 0 > heure > 23 OU 0 > minutes > 59
+    SI heures > 23 OU heures < 0 OU minutes > 59 OU minutes < 0
         ECRIRE "Les données saisies sont invalides"
 
+    SINON
 
     plus3Minutes <-- (minutes + 3)
 
