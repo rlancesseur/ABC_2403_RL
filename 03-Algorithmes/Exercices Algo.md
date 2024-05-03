@@ -395,7 +395,8 @@ VARIABLES
 jour est un ENTIER
 mois est un ENTIER
 annee est un ENTIER
-date est un BOOLEEN
+date est une CHAINE DE CARACTERE
+
 
 TRAITEMENT
 ECRIRE "Saisir numéro jour"
@@ -405,23 +406,21 @@ LIRE mois
 ECRIRE "Saisir numéro année"
 LIRE annee
 
-date <-- jour >= 1 && jour <= 31 && mois >= 1 && mois <= 12
-
-    SI (jour <= 30)
+SI (jour < 1 || jour > 31 || mois < 1 || mois > 12)
+    date = "Il ne s'agit pas d'une date valide"
+    
+    SINON SI (jour > 30)
     Dans le cas 2, 4, 6, 9, 11
-    ALORS date = vrai
-        SINON SI (jour < 28)
-        Dans le cas 2
-        ALORS date = vrai
-            SINON SI (jour < 29) \* année bissextile divisible par 4 \*
-            Dans le cas 2
-            ALORS date = vrai
+    date = "Il ne s'agit pas d'une date valide"
+        SINON SI (annee % 4 == 0 && mois == 2 && jour > 29)
+        date = "Il ne s'agit pas d'une date valide"
+            SINON SI (annee % 4 != 0 && mois == 2 && jour > 28)
+            date = "Il ne s'agit pas d'une date valide"
 
-        SINON date = faux
+SINON 
+    date = "Il s'agit d'une date valide"
 
-    SI date = vrai
-    ALORS ECRIRE "Il s'agit d'une date valide"
-        SINON ECRIRE "Il ne s'agit pas d'une date valide"
+ECRIRE date
 ```
 
 

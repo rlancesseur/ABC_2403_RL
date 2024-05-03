@@ -9,6 +9,7 @@ public class App {
 		int jour;
 		int mois;
 		int annee;
+		String date;
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Saisir le jour");
@@ -20,28 +21,26 @@ public class App {
 		
 		
 		 if (jour < 1 || jour > 31 || mois < 1 || mois > 12) {
-			System.out.println("Il ne s'agit pas d'une date valide");
+			date = "Il ne s'agit pas d'une date valide";
 		}
 		 else if (jour > 30) {
 			 switch (mois) {
-			 case 2, 4, 6, 9, 11 : System.out.println("Il ne s'agit pas d'une date valide");
+			 case 2, 4, 6, 9, 11 : date = "Il ne s'agit pas d'une date valide";
 			 break;
-			 default : System.out.println("Il s'agit d'une date valide");
+			 default : date = "Il s'agit d'une date valide";
 			 }
 		 }
-		 else if (annee % 4 == 0 && jour > 29) {
-			 switch (mois) {
-			 case 2 : System.out.println("Il ne s'agit pas d'une date valide");
-			 }
+		 else if (annee % 4 == 0 && mois ==2 && jour > 29) {
+			  date = "Il ne s'agit pas d'une date valide";
 		 }
-		 else if (annee % 4 != 0 && jour > 28) { 
-			 switch (mois) {
-			 case 2 : System.out.println("Il ne s'agit pas d'une date valide");
-			 }
+		 else if (annee % 4 != 0 && mois == 2 && jour > 28) { 
+			 date = "Il ne s'agit pas d'une date valide";
 		 } 
 		 else {
-			System.out.println("Il s'agit d'une date valide");
+			date = "Il s'agit d'une date valide";
 		}
+		 
+		 System.out.println(date);
 		
 		sc.close();
 	}
