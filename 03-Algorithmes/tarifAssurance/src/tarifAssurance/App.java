@@ -24,40 +24,47 @@ public class App {
 		
 
 
-			if (age < 25 && permis < 2 && accident == 0) {
+			if (age < 25 && permis < 2 && accident == 0 && tempsAssure < 5) {
 				tarif = "rouge";
 			}
-				else if (tempsAssure > 5) {
-					tarif  = "orange";
+				else if (age < 25 && permis < 2 && accident == 0 && tempsAssure > 5) {
+					tarif = "orange";
 				}
-			
-			 if (age < 25 && permis > 2 && accident == 0) {
+			else if (age < 25 && permis > 2 && accident == 0 && tempsAssure < 5) {
 				tarif = "orange";
+			 }
+				else if (age < 25 && permis > 2 && accident == 0 && tempsAssure > 5) {
+					tarif = "vert";
 			}
-			else if (age > 25 && permis < 2 && accident == 1) {
+			else if (age > 25 && permis < 2 && accident == 1 && tempsAssure < 5) {
 				tarif = "rouge";
 			}
-			else if (age > 25 && permis > 2 && accident == 0) {
+				else if (age > 25 && permis < 2 && accident == 1 && tempsAssure > 5) {
+					tarif = "orange";
+				}
+			else if (age > 25 && permis > 2 && accident == 0 && tempsAssure < 5) {
 				tarif = "vert";
 			}
-			else if (age > 25 && permis > 2 && accident == 1) {
+				else if (age > 25 && permis > 2 && accident == 0 && tempsAssure > 5) {
+					tarif = "bleu";
+				}
+			else if (age > 25 && permis > 2 && accident == 1 && tempsAssure < 5) {
 				tarif = "orange";
 			}
-			else if (age > 25 && permis > 2 && accident == 2) {
+				else if (age > 25 && permis > 2 && accident == 1 && tempsAssure > 5) {
+					tarif = "vert";
+				}
+			else if (age > 25 && permis > 2 && accident == 2 && tempsAssure < 5) {
 				tarif = "rouge";
 			}
-				
+				else if (age > 25 && permis > 2 && accident == 2 && tempsAssure > 5) {
+					tarif = "orange";
+				}
+			
 			else {
 				System.out.println("La compagnie refuse de vous assurer");
 			}
 				
-			
-	/*	if (tempsAssure > 5) {
-			tarif "rouge" = tarif "orange";
-			tarif "orange" = tarif "vert";
-			tarif "vert" = tarif "bleu"; 
-		} 
-	*/
 		
 		System.out.println("La compagnie vous attribue le tarif " + tarif);	
 		

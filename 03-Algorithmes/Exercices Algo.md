@@ -359,18 +359,31 @@ LIRE accident
 ECRIRE "Depuis combien de temps êtes vous assuré"
 LIRE tempsAssure
 
-SI conducteur = age < 25 ET permis < 2 ET accident = 0
+SI age < 25 ET permis < 2 ET accident == 0 ET tempsAssure < 5
     ALORS tarif = rouge
-SI conducteur = age < 25 ET permis > 2 ET accident = 0 
+        SINON SI age < 25 ET permis < 2 ET accident == 0 ET tempsAssure > 5
+            ALORS tarif = orange
+SINON SI age < 25 ET permis > 2 ET accident == 0 ET tempsAssure < 5
     ALORS tarif = orange
-        SINON SI age > 25 ET permis < 2 ET accident = 1
-        ALORS tarif = rouge
-SI conducteur = age > 25 ET permis > 2 ET accident = 0
+        SINON SI age < 25 ET permis > 2 ET accident == 0 ET tempsAssure > 5
+            ALORS tarif = vert
+SINON SI age > 25 ET permis < 2 ET accident == 1 ET tempsAssure < 5
+    ALORS tarif = rouge
+        SINON SI age > 25 ET permis < 2 ET accident == 1 ET tempsAssure > 5
+            ALORS tarif = orange
+SINON SI age > 25 ET permis > 2 ET accident == 0 ET tempsAssure < 5
     ALORS tarif = vert
-        SINON SI age > 25 ET permis > 2 ET accident = 1
-        ALORS tarif = orange
-            SINON SI age > 25 ET permis > 2 ET accident = 2
-            ALORS tarif = rouge
+        SINON SI age > 25 ET permis > 2 ET accident == 0 ET tempsAssure > 5
+            ALORS tarif = bleu
+SINON SI age > 25 &ET permis > 2 ET accident == 1 ET tempsAssure < 5
+    ALORS tarif = orange
+        SINON SI age > 25 ET permis > 2 ET accident == 1 ET tempsAssure > 5
+            ALORS tarif = vert
+SINON SI age > 25 ET permis > 2 ET accident == 2 ET tempsAssure < 5
+    ALORS tarif = rouge
+        SINON SI age > 25 ET permis > 2 ET accident == 2 ET tempsAssure > 5
+            ALORS tarif = orange
+
                 SINON
                     ECRIRE "La compagnie refuse de vous assurer"
 
