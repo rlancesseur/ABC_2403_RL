@@ -34,7 +34,7 @@ public class App {
 			 case 2 : System.out.println("Il ne s'agit pas d'une date valide");
 			 }
 		 }
-		 else if (jour > 28) { 
+		 else if (annee % 4 != 0 && jour > 28) { 
 			 switch (mois) {
 			 case 2 : System.out.println("Il ne s'agit pas d'une date valide");
 			 }
