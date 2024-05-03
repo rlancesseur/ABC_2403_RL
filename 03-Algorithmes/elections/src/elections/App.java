@@ -10,7 +10,7 @@ public class App {
 		float deuxiemeCandidat;
 		float troisiemeCandidat;
 		float quatriemeCandidat;
-		float totalVote;
+		String resultat = null;
 		Scanner sc = new Scanner(System.in);
 				
 		System.out.println("Score du premier candidat");
@@ -22,21 +22,27 @@ public class App {
 		System.out.println("Score du quatrième candidat");
 		quatriemeCandidat = sc.nextInt();
 		
-		totalVote = premierCandidat + deuxiemeCandidat + troisiemeCandidat + quatriemeCandidat;
+		if ((premierCandidat + deuxiemeCandidat + troisiemeCandidat + quatriemeCandidat) <= 100) {
 		
+		if (premierCandidat > 50) {
+			resultat = "Le candidat numéro 1 est élu dès le premier tour";
+		}
+		else if (premierCandidat < 12.5) {
+			resultat = "Le candidat numéro 1 a perdu l'élection";
+		}
+		else if ((premierCandidat > deuxiemeCandidat) && (premierCandidat > troisiemeCandidat) && (premierCandidat > quatriemeCandidat)) {
+			resultat = "Le candidat numéro 1 est en ballottage favorable";
+		}
+		else if ((premierCandidat < deuxiemeCandidat) || (premierCandidat < troisiemeCandidat) || (premierCandidat < quatriemeCandidat)) {
+			resultat = "Le candidat numéro 1 est en ballottage dévaforable";
+		}
+		}
 		
-		if (premierCandidat > totalVote / 2) {
-			System.out.println("Le candidat numéro 1 est élu dès le premier tour");
+		else { 
+			resultat = "On annule tout";
 		}
-		else if (premierCandidat < totalVote * 0.12) {
-			System.out.println("Le candidat numéro 1 a perdu l'élection");
-		}
-		else if (premierCandidat > totalVote * 0.12 && premierCandidat > totalVote / 4) {
-			System.out.println("Le candidat numéro 1 est en ballottage favorable");
-		}
-		else if (premierCandidat > totalVote * 0.12 && premierCandidat < totalVote / 4) {
-			System.out.println("Le candidat numéro 1 est en ballottage dévaforable");
-		}
+		
+		System.out.println(resultat);
 		
 		sc.close();
 		

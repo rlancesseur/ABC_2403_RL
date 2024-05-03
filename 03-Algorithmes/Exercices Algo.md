@@ -274,7 +274,7 @@ SI nombrePhotocopies <= 10
     ALORS facture = nombrePhotocopies * P1
 SI nombrePhotocopies <=30 
     ALORS facture = (10 * P1) + (nombrePhotocopies - 10) * P2
-SI nombrePhotocopies > 30
+SINON
     ALORS facture = (10 * P1) + (20 * P2) + (nombrePhotocopies - 30) * P3
 
 ECRIRE "Le montant à payer est de : ", facture, " €."
@@ -296,7 +296,7 @@ premierCandidat est un DECIMAL
 deuxiemeCandidat est un DECIMAL
 troisiemeCandidat est un DECIMAL
 quatriemeCandidat est un DECIMAL
-totalVote est un DECIMAL
+resultat est un STRING
 
 TRAITEMENT
 ECRIRE "Score du premier candidat"
@@ -308,16 +308,20 @@ LIRE troisiemeCandidat
 ECRIRE "Scrore du quatrieme candidat"
 LIRE quatrieme candidat"
 
-totalVote <-- premierCandidat + deuxiemeCandidat + troisiemeCandidat + quatriemeCandidat
+SI ((premierCandidat + deuxiemeCandidat + troisiemeCandidat + quatriemeCandidat) <= 100) 
 
-SI premierCandidat > totalVote / 2
-    ALORS ECRIRE "Le candidat numéro 1 est élu dès le premier tour"
-SI premierCandidat < totalVote * 0.12
-    ALORS ECRIRE "Le candidat numéro 1 a perdu l'élection"
-SI premierCandidat > totalVote * 0.12 && > totalVote / 4
-    ALORS ECRIRE "Le candidat numéro 1 est en ballottage favorable"
-SI premierCandidat > totalVote * 0.12 && < totalVote / 4
-    ALORS ECRIRE "Le candidat numéro 1 est en ballottage défavorable"
+SI premierCandidat > 50
+    ALORS resultat <-- "Le candidat numéro 1 est élu dès le premier tour"
+SINON SI premierCandidat < 12.5
+    ALORS resultat <-- "Le candidat numéro 1 a perdu l'élection"
+SINON SI ((premierCandidat > deuxiemeCandidat) && (premierCandidat > troisiemeCandidat) && (premierCandidat > quatriemeCandidat))
+    ALORS resultat <-- "Le candidat numéro 1 est en ballottage favorable"
+SINON SI ((premierCandidat < deuxiemeCandidat) || (premierCandidat < troisiemeCandidat) || (premierCandidat < quatriemeCandidat))
+    ALORS resultat <-- "Le candidat numéro 1 est en ballottage défavorable"
+SINON
+    ALORS resultat <-- "On annule tout"
+
+ECRIRE resultat
 ```
 
 # Exercice 2.7 : Tarif Assurance
