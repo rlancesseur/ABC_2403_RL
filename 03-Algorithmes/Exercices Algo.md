@@ -190,21 +190,21 @@ TRAITEMENT
 
     SI age <= 5 ALORS
         categorie = Trop jeune
-    SI age <= 6 ALORS
+    SINON SI age <= 6 ALORS
         categorie = Débutant
-    SI age <= 8 ALORS
+    SINON SI age <= 8 ALORS
         categorie = poussin
-    SI age <= 10 ALORS
+    SINON SI age <= 10 ALORS
         categorie = benjamin
-    SI age <= 12 ALORS
+    SINON SI age <= 12 ALORS
         categorie = pupille
-    SI age <= 14 ALORS
+    SINON SI age <= 14 ALORS
         categorie = minime
-    SI age <= 16 ALORS
+    SINON SI age <= 16 ALORS
         categorie = cadet
-    SI age <= 18 ALORS
+    SINON SI age <= 18 ALORS
         categorie = junior
-    SI age <= 34 ALORS
+    SINON SI age <= 34 ALORS
         categorie = sénior
     SINON
         categorie = vétéran
