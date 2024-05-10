@@ -556,3 +556,30 @@ ALORS
 ECRIRE "La somme des nombres jusqu'à ", nombreUtilisateur, " est : ", somme
 ```
 
+# Exercice 3.5 : La factorielle
+
+Écrire un algorithme qui demande à l’utilisateur de saisir un nombre, et qui calcule et affiche sa factorielle.
+
+Par exemple, si l’utilisateur saisit le nombre 8, le programme doit afficher :
+
+La factorielle de 8 est: 40320
+
+```
+VARIABLES
+nombreUtilisateur est un ENTIER
+i est un ENTIER
+factorielle est un ENTIER
+
+TRAITEMENT
+ECRIRE "Saisir un nombre"
+LIRE nombreUtilisateur
+
+TANT QUE
+    i <= nombreUtilisateur
+ALORS
+    somme *= i
+    i++
+
+ECRIRE "La factorielle de ", nombreUtilisateur, " est : ", factorielle
+```
+
