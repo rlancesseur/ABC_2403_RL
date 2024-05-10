@@ -529,3 +529,30 @@ POUR nombreUtilisateur <= nombreUtilisateurPlus10 ; nombreUtilisateur++
 ECRIRE "nombreUtilisateur", " "
 ```
 
+# Exercice 3.4 : La somme
+
+Écrire un algorithme qui demande un nombre de départ, et qui calcule et affiche la somme des entiers jusqu’à ce nombre.
+
+Par exemple, si l’utilisateur saisit le nombre 5, le programme doit afficher :
+
+La somme des nombres jusque 5 est: 15
+
+```
+VARIABLES
+nombreUtilisateur est un ENTIER
+i est un ENTIER
+somme est un ENTIER
+
+TRAITEMENT
+ECRIRE "Saisir un nombre"
+LIRE nombreUtilisateur
+
+TANT QUE
+    i <= nombreUtilisateur
+ALORS
+    somme += i
+    i++
+
+ECRIRE "La somme des nombres jusqu'à ", nombreUtilisateur, " est : ", somme
+```
+
