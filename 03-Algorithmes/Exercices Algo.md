@@ -620,13 +620,14 @@ i est un ENTIER
 
 TRAITEMENT
 TANT QUE nombre != 0
-ECRIRE "Entrez le nombre numéro " + i + " : "
+    ECRIRE "Entrez le nombre numéro " + i + " : "
+    LIRE nombre
 
-    SI (nombre > nombreMax)
-		ALORS   nombreMax = nombre
-		        ligneMax = i
+        SI (nombre > nombreMax)
+		    ALORS   nombreMax = nombre
+		            ligneMax = i
 
-i++
+    i++
 
 ECRIRE  "Résultat : "
 ECRIRE  "Le plus grand des nombres saisis est : " + nombreMax
