@@ -583,3 +583,53 @@ ALORS
 ECRIRE "La factorielle de ", nombreUtilisateur, " est : ", factorielle
 ```
 
+# Exercice 3.6 : Et le plus grand est…
+
+Érire un algorithme qui demande successivement 20 nombres à l’utilisateur, et qui lui indique ensuite quel est le plus grand parmi ces 20 nombres.
+
+```
+VARIABLES
+nombre est un ENTIER
+nombreMax est un ENTIER
+ligneMax est un ENTIER
+
+TRAITEMENT
+POUR int i = 1; i <= 20; i++
+    ECRIRE "Entrez le nombre numéro " + i + " : "
+    LIRE nombre
+
+        SI nombre > nombreMax
+        ALORS nombreMax = nombre
+              ligneMax = i
+
+ECRIRE  "Résultat : "
+ECRIRE  "Le plus grand des nombres saisis est : " + nombreMax
+ECRIRE  nombreMax + " était le nombre numéro " + ligneMax
+```
+
+# Exercice 3.7 : Et le plus grand est… encore.
+
+Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d’avance combien l’utilisateur souhaite saisir de nombres. La saisie des nombres s’arrête lorsque l’utilisateur entre un zéro.
+
+```
+VARIABLES
+nombre est un ENTIER
+nombreMax est un ENTIER
+ligneMax est un ENTIER
+i est un ENTIER
+
+TRAITEMENT
+TANT QUE nombre != 0
+ECRIRE "Entrez le nombre numéro " + i + " : "
+
+    SI (nombre > nombreMax)
+		ALORS   nombreMax = nombre
+		        ligneMax = i
+
+i++
+
+ECRIRE  "Résultat : "
+ECRIRE  "Le plus grand des nombres saisis est : " + nombreMax
+ECRIRE  nombreMax + " était le nombre numéro " + ligneMax
+```
+
