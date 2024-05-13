@@ -634,3 +634,42 @@ ECRIRE  "Le plus grand des nombres saisis est : " + nombreMax
 ECRIRE  nombreMax + " était le nombre numéro " + ligneMax
 ```
 
+# Exercice 3.8 : Paiement et rendu monnaie
+
+Écrire un algorithme qui demande à l’utilisateur de saisir des prix en € (nombre à 1 décimale) correspondant aux achats d’un client. Lorsque l’utilisateur saisit le nombre 0, on estime que la saisie est temrinée. Le programme calcule et affiche la somme totale à payer.
+
+On estime que le client paie uniquement avec des billets de 5€.
+
+Afficher ensuite :
+
+Le nombre de billets de 5€ qu’il doit donner pour payer la somme dûe.
+La somme à rendre par le magasin
+La répartition optimale des billets / pièces à rendre au client (pièces disponibles : 0.10€ 0.20€, 0.50€, 1€, 2€).
+
+```
+VARIABLES
+prixAchat est un REEL
+sommeTotal est un REEL
+billetDe5 est un ENTIER
+totalBilletDe5 est un ENTIER
+renduMonnaie est un REEL
+nombrePiece est un ENTIER
+
+TRAITEMENT
+TANT QUE prixAchat != 0
+ALORS
+    ECRIRE "Saisir un prix : "
+    LIRE prixAchat
+
+    sommeTotal += prixAchat
+    billetDe5 = sommeTotal / 5
+    totalBilletDe5 = billetDe5 * 5
+    renduMonnaie = totalBilletDe5 - sommeTotal
+    
+
+ECRIRE "Le client doit payer : ", sommeTotal
+ECRIRE "Le client doit donner ", billetDe5, " billets de 5 Euros soit ", totalBilletDe5, " Euros."
+ECRIRE "Rendu monnaie : ", renduMonnaie
+ECRIRE "Répartition de la monnaie à restituer au client : "
+```
+
