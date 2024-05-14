@@ -24,22 +24,24 @@ public class App {
 			prixAchat = sc.nextFloat();
 			
 			sommeTotal += prixAchat;
-			billetDe5 = ((int)sommeTotal / 5) + 1; 
-			totalBilletDe5 = billetDe5 * 5;
-			renduMonnaie = totalBilletDe5 - sommeTotal;
 			
-			if (renduMonnaie != 0) {
-				nombrePiece2 = (int)renduMonnaie / 2;
-				nombrePiece1 = (int)renduMonnaie;
-				nombrePiece50 = (int)renduMonnaie * 2;
-				nombrePiece20 = (int)renduMonnaie * 5;
-				nombrePiece10 = ((int)renduMonnaie * 10);
+			if (sommeTotal % 5 != 0) {
+				billetDe5 = ((int)sommeTotal / 5) + 1; 
 			}
 			
 			else {
-				System.out.println("Pas de monnaie à restituer");
+				billetDe5 = (int)sommeTotal / 5;
 			}
 		}
+		
+		totalBilletDe5 = billetDe5 * 5;
+		renduMonnaie = totalBilletDe5 - sommeTotal;
+		
+		nombrePiece2 = (int)renduMonnaie / 2;
+		nombrePiece1 = (int)renduMonnaie;
+		nombrePiece50 = (int)renduMonnaie * 2;
+		nombrePiece20 = (int)renduMonnaie * 5;
+		nombrePiece10 = ((int)renduMonnaie * 10);
 		
 		System.out.println("Le client doit payer : " + sommeTotal);
 		System.out.println("Le client doit donner " + billetDe5 + " billets de 5 Euros soit " + totalBilletDe5 + " Euros.");
