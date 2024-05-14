@@ -653,7 +653,11 @@ sommeTotal est un REEL
 billetDe5 est un ENTIER
 totalBilletDe5 est un ENTIER
 renduMonnaie est un REEL
-nombrePiece est un ENTIER
+nombrePiece10 est un ENTIER
+nombrePiece20 est un ENTIER
+nombrePiece50 est un ENTIER
+nombrePiece1 est un ENTIER
+nombrePiece2 est un ENTIER
 
 TRAITEMENT
 TANT QUE prixAchat != 0
@@ -662,7 +666,13 @@ ALORS
     LIRE prixAchat
 
     sommeTotal += prixAchat
+
+SI sommeTotal % 5 != 0
+    ALORS billetDe5 = ((int)sommeTotal / 5) + 1
+
+SINON
     billetDe5 = sommeTotal / 5
+
     totalBilletDe5 = billetDe5 * 5
     renduMonnaie = totalBilletDe5 - sommeTotal
     
@@ -670,7 +680,34 @@ ALORS
 ECRIRE "Le client doit payer : ", sommeTotal
 ECRIRE "Le client doit donner ", billetDe5, " billets de 5 Euros soit ", totalBilletDe5, " Euros."
 ECRIRE "Rendu monnaie : ", renduMonnaie
+
+    nombrePiece2 = (int)renduMonnaie / 2;
+	renduMonnaie -= nombrePiece2 * 2;
+		
+	nombrePiece1 = (int)renduMonnaie;
+	renduMonnaie -= nombrePiece1;
+		
+	nombrePiece50 = (int)renduMonnaie * 2;
+	renduMonnaie -= nombrePiece50 * 0.50;
+		
+	nombrePiece20 = (int)renduMonnaie * 5;
+	renduMonnaie -= nombrePiece20 * 0.20;
+		
+	nombrePiece10 = ((int)renduMonnaie * 10);
+	renduMonnaie -= nombrePiece10 * 0.10;
+
 ECRIRE "Répartition de la monnaie à restituer au client : "
+
+SI nombrePiece2 > 0
+    ECRIRE nombrePiece2, " pièces de 2€"
+SI nombrePiece1 > 0
+	ECRIRE nombrePiece1 + " pièces de 1€"
+SI nombrePiece50 > 0
+	ECRIRE nombrePiece50 + " pièces de 0.50€"
+SI nombrePiece20 > 0
+	ECRIRE nombrePiece20 + " pièces de 0.20€"
+SI nombrePiece10 > 0
+    ECRIRE nombrePiece10 + " pièces de 0.10€"
 ```
 
 # Exercice 3.9 : Les courses
