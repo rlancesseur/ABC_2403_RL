@@ -691,4 +691,20 @@ Cet algorithme peut être écrit d’une manière simple, mais relativement peu 
 
 ```
 VARIABLES
+chevauxPartants est un ENTIER
+chevauxJoues est un ENTIER
+X est un REEL
+Y est un REEL
 
+TRAITEMENT
+ECRIRE "Saisissez le nombre de chevaux partants"
+LIRE chevauxPartants
+ECRIRE "Saisissez le nombre de chevaux joués"
+LIRE chevauxJoues
+
+X = n! / (n - p)!
+Y = n! / (p! * (n - p)!)
+
+ECRIRE "Dans l'ordre : une chance sur ", X, " de gagner"
+ECRIRE "Dans le désordre : une chance sur ", Y, " de gagner"
+```
