@@ -447,11 +447,11 @@ VARIABLE
 nombreUtilisateur est un ENTIER
 
 TRAITEMENT
-ECRIRE "Saisir un nombre entre 1 et 3"
-LIRE nombreUtilisateur
+FAIRE
+    ECRIRE "Saisir un nombre entre 1 et 3"
+    LIRE nombreUtilisateur
 
 TANT QUE nombreUtilisateur < 1 || nombreUtilisateur > 3
-ALORS REPETER
 
 SINON ECRIRE "Bravo, vous avez réussi ! Vous avez saisi le nombre : ", nombreUtilisateur
 ```
@@ -469,6 +469,7 @@ VARIABLE
 nombreUtilisateur est un ENTIER
 
 TRAITEMENT
+FAIRE
 ECRIRE "Saisir un nombre entre 10 et 20"
 LIRE nombre Utilisateur
 
@@ -478,7 +479,6 @@ SINON SI nombreUtilisateur > 20
     ECRIRE "Plus petit !"
 
 TANT QUE nombreUtilisateur < 10 OU nombreUtilisateur > 20
-ALORS REPETER
 
 SINON ECRIRE "Yes ! You did it !"
 ```
@@ -526,7 +526,8 @@ nombreUtilisateurPlus10 <== nombreUtilisateur + 10
 ECRIRE "Les 10 nombres après ", nombreUtilisateur, " sont : "
 
 POUR nombreUtilisateur <= nombreUtilisateurPlus10 ; nombreUtilisateur++
-ECRIRE "nombreUtilisateur", " "
+    ECRIRE "nombreUtilisateur", " "
+FIN POUR
 ```
 
 # Exercice 3.4 : La somme
@@ -549,7 +550,6 @@ LIRE nombreUtilisateur
 
 TANT QUE
     i <= nombreUtilisateur
-ALORS
     somme += i
     i++
 
@@ -576,7 +576,6 @@ LIRE nombreUtilisateur
 
 TANT QUE
     i <= nombreUtilisateur
-ALORS
     somme *= i
     i++
 
@@ -594,13 +593,14 @@ nombreMax est un ENTIER
 ligneMax est un ENTIER
 
 TRAITEMENT
-POUR int i = 1; i <= 20; i++
+POUR i de 1 à 20, i++
     ECRIRE "Entrez le nombre numéro " + i + " : "
     LIRE nombre
 
         SI nombre > nombreMax
         ALORS nombreMax = nombre
               ligneMax = i
+FIN POUR
 
 ECRIRE  "Résultat : "
 ECRIRE  "Le plus grand des nombres saisis est : " + nombreMax
@@ -661,7 +661,6 @@ nombrePiece2 est un ENTIER
 
 TRAITEMENT
 TANT QUE prixAchat != 0
-ALORS
     ECRIRE "Saisir un prix : "
     LIRE prixAchat
 
@@ -672,6 +671,8 @@ SI sommeTotal % 5 != 0
 
 SINON
     billetDe5 = sommeTotal / 5
+
+FIN TANT QUE
 
     totalBilletDe5 = billetDe5 * 5
     renduMonnaie = totalBilletDe5 - sommeTotal
@@ -730,6 +731,13 @@ Cet algorithme peut être écrit d’une manière simple, mais relativement peu 
 VARIABLES
 chevauxPartants est un ENTIER
 chevauxJoues est un ENTIER
+i = 1 est un ENTIER
+factorielleChevauxPartants = 1 est un ENTIER
+i2 = 1 est un ENTIER
+factorielleChevauxJoues = 1 est un ENTIER
+i3 = 1 est un ENTIER
+diff = 1 est un ENTIER
+factorielleDiff = 1 est un ENTIER
 X est un REEL
 Y est un REEL
 
@@ -739,8 +747,23 @@ LIRE chevauxPartants
 ECRIRE "Saisissez le nombre de chevaux joués"
 LIRE chevauxJoues
 
-X = n! / (n - p)!
-Y = n! / (p! * (n - p)!)
+TANT QUE i <= chevauxPartants
+		factorielleChevauxPartants *= i
+		i++
+		
+TANT QUE i2 <= chevauxJoues
+		factorielleChevauxJoues *= i2
+		i2++
+		
+		diff = chevauxPartants - chevauxJoues
+		
+TANT QUE i3 <= diff
+		factorielleDiff *= i3;
+		i3++
+		
+		X = factorielleChevauxPartants / factorielleDiff
+		
+		Y = factorielleChevauxPartants / (factorielleChevauxJoues * factorielleDiff)
 
 ECRIRE "Dans l'ordre : une chance sur ", X, " de gagner"
 ECRIRE "Dans le désordre : une chance sur ", Y, " de gagner"
