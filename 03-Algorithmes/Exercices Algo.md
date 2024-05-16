@@ -515,18 +515,15 @@ TANT QUE nombreUtilisateur <= nombreUtilisateurPlus10
 ```
 VARIABLES
 nombreUtilisateur est un ENTIER
-nombreUtilisateurPlus10 est un ENTIER
 
 TRAITEMENT
 ECRIRE "Saisir un nombre : "
 LIRE nombreUtilisateur
 
-nombreUtilisateurPlus10 <== nombreUtilisateur + 10
-
 ECRIRE "Les 10 nombres après ", nombreUtilisateur, " sont : "
 
-POUR nombreUtilisateur <= nombreUtilisateurPlus10 ; nombreUtilisateur++
-    ECRIRE "nombreUtilisateur", " "
+POUR i de 1 à 10; i++
+    ECRIRE i + nombreUtilisateur, " "
 FIN POUR
 ```
 
