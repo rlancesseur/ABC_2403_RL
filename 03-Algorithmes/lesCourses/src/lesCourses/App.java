@@ -48,7 +48,6 @@ public class App {
 		double Y;
 		int numX;
 		int denomX;
-		int denomY;
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Saisissez le nombre de chevaux partants : ");
@@ -76,13 +75,14 @@ public class App {
 			i3++;
 		}
 		
-	 int diviseurCommun = getPGCD(factorielleChevauxPartants, factorielleChevauxJoues);
+	    int diviseurCommun = getPGCD(factorielleChevauxPartants, factorielleChevauxJoues);
+	    
 		numX = factorielleChevauxPartants;
 		
 		denomX = factorielleDiff;
 				
 		
-		System.out.println("Dans l'ordre : " + numX + " chance sur " + denomX + " de gagner soit :"+ numX+"/"+denomX + "diviseur"+ diviseurCommun);
+		System.out.println("Dans l'ordre : " + numX + " chance sur " + denomX + " de gagner soit :"+ numX+"/"+denomX + " diviseur "+ diviseurCommun);
 	//	System.out.println("Dans le désordre : une chance sur " + Y + " de gagner");
 		
 		sc.close();
