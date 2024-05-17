@@ -69,3 +69,30 @@ SINON
 
         FIN SI
 ```
+
+# Exercice 3a.4 : Recherche des diviseurs d’un nombre.
+
+Lire un nombre entier et afficher tous ses diviseurs autres que 1 et lui-même.
+
+```
+VARIABLES
+
+nombreEntier est un ENTIER
+moitie est un ENTIER
+
+TRAITEMENT
+
+ECRIRE "Saisissez un nombre"
+LIRE nombreEntier
+
+moitie <== (nombreEntier / 2)
+
+ECRIRE "Les diviseurs de ", nombreEntier, " sont : "
+
+POUR i de 2 à moitie; i++
+    SI (nombreEntier % i == 0)
+        ECRIRE i, " "
+    FIN SI
+```
+
+
