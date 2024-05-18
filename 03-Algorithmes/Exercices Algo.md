@@ -765,3 +765,29 @@ TANT QUE i3 <= diff
 ECRIRE "Dans l'ordre : une chance sur ", X, " de gagner"
 ECRIRE "Dans le désordre : une chance sur ", Y, " de gagner"
 ```
+
+# Exercice 4.1 : Créer un tableau d'entiers
+
+Écrire un algorithme qui déclare un tableau d’entiers et le remplit avec 7 valeurs numériques en les mettant toutes à zéro.
+
+```
+VARIABLES
+
+tableau contient des ENTIERS
+
+TRAITEMENT
+
+```
+
+# Exercice 4.2 : Créer un tableau de chaines de caractères
+
+Écrire un algorithme qui déclare et remplit un tableau contenant les six voyelles de l’alphabet latin.
+
+```
+VARIABLES
+
+tableau contient des STRING
+
+TRAITEMENT
+
+```
