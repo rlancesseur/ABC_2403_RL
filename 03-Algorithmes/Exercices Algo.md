@@ -791,3 +791,46 @@ tableau contient des STRING
 TRAITEMENT
 
 ```
+
+# Exercice 4.3 : Alimenter un tableau
+
+Écrire un algorithme permettant à l’utilisateur de saisir un nombre quelconque de valeurs, qui devront être stockées dans un tableau.
+
+L’utilisateur doit donc commencer par entrer le nombre de valeurs qu’il compte saisir. Il effectuera ensuite cette saisie. Enfin, une fois la saisie terminée, le programme affichera le nombre de valeurs négatives et le nombre de valeurs positives.
+
+```
+VARIABLES
+
+limiteTableau est un ENTIER
+positif est un ENTIER
+negatif est un ENTIER
+
+TRAITEMENT
+
+ECRIRE "Entrez le nombre de valeur que vous comptez saisir : "
+LIRE limiteTableau
+
+tableau content [limiteTableau] ENTIER
+
+ECRIRE "Saisissez vos valeurs : "
+
+POUR i de 0 à limiteTableau; i++
+
+SI tableau[i] < 0
+    negatif += 1
+
+    SINON tableau[i] > 0
+        positif += 1
+
+FIN POUR
+
+SI limiteTableau == negatif
+    ECRIRE "Toutes les valeurs sont négatives"
+
+SINON SI limiteTableau == positif
+    ECRIRE "Toutes les baleurs sont positives"
+
+    SINON
+        ECRIRE "Il y a " + negatif + " nombres négatifs, et " + positif + " nombres positifs."
+
+```
