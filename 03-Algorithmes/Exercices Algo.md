@@ -815,13 +815,13 @@ tableau content [limiteTableau] ENTIER
 ECRIRE "Saisissez vos valeurs : "
 
 POUR i de 0 à limiteTableau; i++
+LIRE tableau[i]
 
 SI tableau[i] < 0
     negatif += 1
 
     SINON tableau[i] > 0
         positif += 1
-
 FIN POUR
 
 SI limiteTableau == negatif
@@ -831,6 +831,29 @@ SINON SI limiteTableau == positif
     ECRIRE "Toutes les baleurs sont positives"
 
     SINON
-        ECRIRE "Il y a " + negatif + " nombres négatifs, et " + positif + " nombres positifs."
+        ECRIRE "Il y a ", negatif, " nombres négatifs, et ", positif, " nombres positifs."
 
+```
+
+# Exercice 4.4 : Somme des valeurs d’un tableau
+
+Écrire un algorithme calculant la somme des valeurs d’un tableau (on suppose que le tableau a été préalablement saisi avec 10 nombres réels (float)).
+
+```
+VARIABLES
+
+sommeValeurs est un REEL
+
+TRAITEMENT
+
+tableau contient 10 REELS
+
+ECRIRE "Saisissez 10 nombres réels : "
+
+POUR i de 0 à 10; i++
+LIRE tableau[i]
+sommeValeurs += tableau[i]
+FIN POUR
+
+ECRIRE "La somme des valeurs du tableau est de ", sommeValeurs
 ```
