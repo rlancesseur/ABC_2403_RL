@@ -37,13 +37,10 @@ public class App {
 		
 		int chevauxPartants;
 		int chevauxJoues;
-		int i = 1;
 		int factorielleChevauxPartants = 1;
-		int i2 = 1;
 		int factorielleChevauxJoues = 1;
-		int i3 = 1;
-		int diff = 1;
-		int factorielleDiff = 1;
+		int difference = 1;
+		int factorielleDifference = 1;
 		double X;
 		double Y;
 		int numX;
@@ -55,31 +52,35 @@ public class App {
 		System.out.print("Saisissez le nombre de chevaux joués : ");
 		chevauxJoues = sc.nextInt();
 		
-		while (i <= chevauxPartants)
+		for (int i = 1; i <= chevauxPartants; i++)
 		{
 			factorielleChevauxPartants *= i;
-			i++;
 		}
 		
-		while (i2 <= chevauxJoues)
+		for (int i = 1; i <= chevauxJoues; i++)
 		{
-			factorielleChevauxJoues *= i2;
-			i2++;
+			factorielleChevauxJoues *= i;
 		}
 		
-		diff = chevauxPartants - chevauxJoues;
+		difference = chevauxPartants - chevauxJoues;
 		
-		while (i3 <= diff)
+		for (int i = 1; i <= difference; i++)
 		{
-			factorielleDiff *= i3;
-			i3++;
+			factorielleDifference *= i;
 		}
 		
+	 /* X = factorielleChevauxPartants / factorielleDifference;
+		Y = factorielleChevauxPartants / (factorielleChevauxJoues * factorielleDifference);
+		
+		System.out.println("Dans l’ordre : une chance sur " + X + " de gagner ");
+		System.out.println("Dans l’ordre : une chance sur " + Y + " de gagner ");
+   	 */
+
 	    int diviseurCommun = getPGCD(factorielleChevauxPartants, factorielleChevauxJoues);
 	    
 		numX = factorielleChevauxPartants;
 		
-		denomX = factorielleDiff;
+		denomX = factorielleDifference;
 				
 		
 		System.out.println("Dans l'ordre : " + numX + " chance sur " + denomX + " de gagner soit :"+ numX+"/"+denomX + " diviseur "+ diviseurCommun);
