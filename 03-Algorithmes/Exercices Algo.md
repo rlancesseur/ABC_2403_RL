@@ -857,3 +857,37 @@ FIN POUR
 
 ECRIRE "La somme des valeurs du tableau est de ", sommeValeurs
 ```
+
+# Exercice 4.5 : Somme des valeurs de 2 tableaux
+
+Écrire un algorithme qui respecte la demande suivante :
+
+Créer 2 tableaux d’entiers de même longueur.
+Créer un 3ème tableau dont les valeurs sont la somme des valeurs des 2 tableaux précédents.
+
+```
+TRAITEMENT
+
+tableau1 contient 5 ENTIERS
+tableau2 contient 5 ENTIERS
+tableauSomme contient tableau1.length
+
+ECRIRE "Saisissez les 5 nombres du premier tableau : "
+POUR i de 0 à 5; i++
+LIRE tableau1[i]
+FIN POUR
+
+ECRIRE "Saisissez les 5 nombres du deuxième tableau : "
+POUR i de 0 à 5; i++
+LIRE tableau2[i]
+FIN POUR
+
+POUR i de 0 à 5; i++
+tableauSomme[i] <== tableau1[i] + tableau2[i]
+FIN POUR
+
+ECRIRE "La somme des valeurs des 2 tableaux précédents sont : " 
+POUR i de 0 à tableauSomme.length; i++
+ECRIRE tableauSomme[i], " "
+```
+
