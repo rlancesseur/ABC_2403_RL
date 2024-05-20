@@ -924,3 +924,34 @@ FIN POUR
 ECRIRE "La somme des produits des deux tableaux est de : " + somme
 ```
 
+# Exercice 4.7 : Modifier un tableau
+
+Écrire un algorithme qui permet la saisie d’un nombre quelconque de valeurs, sur le principe de l’exercice 4.3.
+
+Toutes les valeurs doivent être ensuite augmentées de 1, et le nouveau tableau sera affiché à l’écran.
+
+```
+VARIABLES
+
+limiteTableau est un ENTIER
+
+TRAITEMENT
+
+ECRIRE "Entrez le nombre de valeur que vous comptez saisir : "
+LIRE limiteTableau
+
+tableau contient [limiteTableau] ENTIER
+
+ECRIRE "Saisissez vos valeurs : "
+POUR i de 0 à limiteTableau; i++
+LIRE tableau[i]
+FIN POUR
+
+ECRIRE "On ajoute 1 à ces valeurs : "
+
+POUR i de 0 à limiteTableau; i++
+tableau[i] += 1
+ECRIRE (tableau[i], " ")
+FIN POUR
+```
+
