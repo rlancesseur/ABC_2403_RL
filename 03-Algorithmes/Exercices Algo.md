@@ -955,3 +955,34 @@ ECRIRE (tableau[i], " ")
 FIN POUR
 ```
 
+# Exercice 4.8 : Recherche dans un tableau
+
+Écrire un algorithme permettant, toujours sur le même principe, à l’utilisateur de saisir un nombre déterminé de valeurs. Le programme, une fois la saisie terminée, renvoie la plus grande valeur en précisant quelle position elle occupe dans le tableau. On prendra soin d’effectuer la saisie dans un premier temps, et la recherche de la plus grande valeur du tableau dans un second temps.
+
+```
+VARIABLES
+
+limiteTableau est un ENTIER
+valeurPlusGrande est un ENTIER
+indexValeurPlusGrande est un ENTIER
+
+TRAITEMENT
+
+ECRIRE "Entrez le nombre de valeur que vous comptez saisir : "
+LIRE limiteTableau
+
+tableau contient [limiteTableau] ENTIERS
+
+POUR i de 0 à limiteTableau; i++
+LIRE tableau[i]
+
+POUR i de 0 à limiteTableau; i++
+    SI valeurPlusGrande < tableau[i]
+    ALORS valeurPlusGrande = tableau[i]
+          indexValeurPlusGrande = i
+    FIN SI
+FIN POUR
+
+ECRIRE "La valeur la plus grande du tableau est : " + valeurPlusGrande + " et se trouve en : " + indexValeurPlusGrande
+```
+
