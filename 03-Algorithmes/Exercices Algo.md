@@ -891,3 +891,36 @@ POUR i de 0 à tableauSomme.length; i++
 ECRIRE tableauSomme[i], " "
 ```
 
+# Exercice 4.6 : Somme des valeurs de 2 tableaux
+
+Toujours à partir de deux tableaux d’entiers précédemment saisis, écrivez un algorithme qui calcule la somme des produits des deux tableaux. Pour calculer le résultat, il faut multiplier chaque élément du tableau 1 par chaque élément du tableau 2, et additionner le tout.
+
+```
+VARIABLES
+
+somme est un ENTIER
+
+TRAITEMENT
+
+tableau1 contient 3 ENTIERS
+tableau2 contient 3 ENTIERS
+
+ECRIRE "Saisissez les 3 nombres du premier tableau : "
+POUR i de 0 à 3; i++
+LIRE tableau1[i]
+FIN POUR
+
+ECRIRE "Saisissez les 3 nombres du deuxième tableau : "
+POUR i de 0 à 3; i++
+LIRE tableau2[i]
+FIN POUR
+
+POUR i de 0 à 3
+    POUR i2 de 0 à 3
+        somme = tableau1[i] * tableau2[i2]
+    FIN POUR
+FIN POUR
+
+ECRIRE "La somme des produits des deux tableaux est de : " + somme
+```
+
