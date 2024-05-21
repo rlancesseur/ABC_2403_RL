@@ -1025,3 +1025,46 @@ FIN POUR
 ECRIRE "Le nombre de notes supérieures à la moyenne est de : " + notesSuperieuresMoyenne
 ```
 
+# Exercice 5.1 : Calcul des nombres parfaits
+
+On souhaite écrire un programme de calcul des 4 premiers nombres parfaits.
+
+Un nombre est dit parfait s’il est égal à la somme de ses diviseurs, 1 compris.
+
+L’algorithme retenu contiendra deux boucles imbriquées. Une boucle de comptage des nombres parfaits qui s’arrêtera lorsque le décompte sera atteint, la boucle interne ayant vocation à calculer tous les diviseurs du nombre examiné d’en faire la somme puis de tester l’égalité entre cette somme et le nombre.
+
+Ecrivez le programme complet qui affiche les 4 premiers nombres parfaits.
+
+```
+VARIABLES
+
+TRAITEMENT
+
+```
+
+# Exercice 5.2.1 : : Conversion Kilomètres <-> Miles
+
+L’utilisateur saisit une valeur en kilomètres comprise entre 0.01 et 1 000 000.
+
+Si la valeur est hors limite, l’utilisateur est invité à saisir une nouvelle valeur. Si la valeur est égale à q, le programme se termine et se ferme.
+
+Formule km vers mi : 1 miles = 1.609 kilomètres.
+
+Le programme affiche le résultat de la conversion sous forme de nombre réel double précision.
+
+```
+VARIABLES
+
+valeurKm est un DOUBLE
+valeurMi est un DOUBLE
+
+FAIRE
+ECRIRE "Saisissez une valeur en kilomètres comprise entre 0.01 et 1 000 000 : "
+LIRE valeurKm
+
+TANT QUE valeurKm < 0.01 || valeurKm > 1000000
+
+valeurMi = valeurKm / 1.609
+
+ECRIRE valeurKm + "kilomètres = " + valeurMi + "miles"
+```
