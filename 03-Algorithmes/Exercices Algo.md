@@ -1068,3 +1068,14 @@ valeurMi = valeurKm / 1.609
 
 ECRIRE valeurKm + "kilomètres = " + valeurMi + "miles"
 ```
+
+# Exercice 5.2.2 : Conversion Kilomètres <-> Miles
+
+L’utilisateur peut choisir le sens de la conversion.
+
+Il saisit une valeur à convertir avec son unité de mesure (km ou mi).
+
+Si aucune unité de mesure n’est indiquée, le programme considère la valeur en kilomètres.
+
+```
+VARIABLES
