@@ -343,6 +343,7 @@ Ecrire l’algorithme permettant de saisir les données nécessaires (sans contr
 
 ```
 VARIABLES
+
 age = 25 est un ENTIER
 permis = 2 est un ENTIER
 accident est un ENTIER
@@ -350,6 +351,7 @@ tempsAssure est un ENTIER
 tarif est un STRING
 
 TRAITEMENT
+
 ECRIRE "Saisir âge"
 LIRE age
 ECRIRE "Depuis combien de temps avez-vous le permis"
@@ -405,6 +407,7 @@ L’année est bissextile si elle est divisible par quatre. Toutefois, les anné
 
 ```
 VARIABLES
+
 jour est un ENTIER
 mois est un ENTIER
 annee est un ENTIER
@@ -412,6 +415,7 @@ date est une CHAINE DE CARACTERE
 
 
 TRAITEMENT
+
 ECRIRE "Saisir numéro jour"
 LIRE jour
 ECRIRE "Saisir numéro mois"
@@ -444,16 +448,18 @@ Lorsque la réponse convient, afficher le nombre saisi suivi de “Bravo, vous a
 
 ```
 VARIABLE
+
 nombreUtilisateur est un ENTIER
 
 TRAITEMENT
+
 FAIRE
     ECRIRE "Saisir un nombre entre 1 et 3"
     LIRE nombreUtilisateur
 
 TANT QUE nombreUtilisateur < 1 || nombreUtilisateur > 3
 
-SINON ECRIRE "Bravo, vous avez réussi ! Vous avez saisi le nombre : ", nombreUtilisateur
+ECRIRE "Bravo, vous avez réussi ! Vous avez saisi le nombre : ", nombreUtilisateur
 ```
 
 # Exercice 3.2 : La bonne plage de galets
@@ -466,9 +472,11 @@ Lorsque la réponse convient, afficher le nombre saisi suivi de “Yes, you did 
 
 ```
 VARIABLE
+
 nombreUtilisateur est un ENTIER
 
 TRAITEMENT
+
 FAIRE
 ECRIRE "Saisir un nombre entre 10 et 20"
 LIRE nombre Utilisateur
@@ -480,7 +488,7 @@ SINON SI nombreUtilisateur > 20
 
 TANT QUE nombreUtilisateur < 10 OU nombreUtilisateur > 20
 
-SINON ECRIRE "Yes ! You did it !"
+ECRIRE "Yes ! You did it !"
 ```
 
 # Exercice 3.3 : Les nombres suivants
@@ -495,28 +503,29 @@ Les 10 nombres après 17 sont: 18, 19 ,20 ,21 ,22 ,23 ,24 ,25 ,26 ,27
 
 ```
 VARIABLES
+
 nombreUtilisateur est un ENTIER
-nombreUtilisateurPlus10 est un ENTIER
+i est un ENTIER
 
 TRAITEMENT
+
 ECRIRE "Saisir un nombre : "
 LIRE nombreUtilisateur
 
-nombreUtilisateurPlus10 <== nombreUtilisateur + 10
-
 ECRIRE "Les 10 nombres après ", nombreUtilisateur, " sont : "
 
-TANT QUE nombreUtilisateur <= nombreUtilisateurPlus10
-    ALORS
-    ECRIRE nombreUtilisateur, " "
-    nombreUtilisateur++
+TANT QUE i <= 10
+    ECRIRE nombreUtilisateur + i, " "
+    i++
 ```
 
 ```
 VARIABLES
+
 nombreUtilisateur est un ENTIER
 
 TRAITEMENT
+
 ECRIRE "Saisir un nombre : "
 LIRE nombreUtilisateur
 
@@ -537,18 +546,17 @@ La somme des nombres jusque 5 est: 15
 
 ```
 VARIABLES
+
 nombreUtilisateur est un ENTIER
-i est un ENTIER
 somme est un ENTIER
 
 TRAITEMENT
+
 ECRIRE "Saisir un nombre"
 LIRE nombreUtilisateur
 
-TANT QUE
-    i <= nombreUtilisateur
+POUR i de 0 à nombreUtilisateur; i++
     somme += i
-    i++
 
 ECRIRE "La somme des nombres jusqu'à ", nombreUtilisateur, " est : ", somme
 ```
@@ -563,18 +571,17 @@ La factorielle de 8 est: 40320
 
 ```
 VARIABLES
+
 nombreUtilisateur est un ENTIER
-i est un ENTIER
 factorielle est un ENTIER
 
 TRAITEMENT
+
 ECRIRE "Saisir un nombre"
 LIRE nombreUtilisateur
 
-TANT QUE
-    i <= nombreUtilisateur
+POUR i de 1 à nombreUtilisateur; i++
     somme *= i
-    i++
 
 ECRIRE "La factorielle de ", nombreUtilisateur, " est : ", factorielle
 ```
@@ -585,11 +592,13 @@ ECRIRE "La factorielle de ", nombreUtilisateur, " est : ", factorielle
 
 ```
 VARIABLES
+
 nombre est un ENTIER
 nombreMax est un ENTIER
 ligneMax est un ENTIER
 
 TRAITEMENT
+
 POUR i de 1 à 20, i++
     ECRIRE "Entrez le nombre numéro " + i + " : "
     LIRE nombre
@@ -597,6 +606,7 @@ POUR i de 1 à 20, i++
         SI nombre > nombreMax
         ALORS nombreMax = nombre
               ligneMax = i
+        FIN SI
 FIN POUR
 
 ECRIRE  "Résultat : "
@@ -610,12 +620,14 @@ Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d�
 
 ```
 VARIABLES
+
 nombre est un ENTIER
 nombreMax est un ENTIER
 ligneMax est un ENTIER
 i est un ENTIER
 
 TRAITEMENT
+
 TANT QUE nombre != 0
     ECRIRE "Entrez le nombre numéro " + i + " : "
     LIRE nombre
@@ -645,6 +657,7 @@ La répartition optimale des billets / pièces à rendre au client (pièces disp
 
 ```
 VARIABLES
+
 prixAchat est un REEL
 sommeTotal est un REEL
 billetDe5 est un ENTIER
@@ -657,18 +670,19 @@ nombrePiece1 est un ENTIER
 nombrePiece2 est un ENTIER
 
 TRAITEMENT
+
 TANT QUE prixAchat != 0
     ECRIRE "Saisir un prix : "
     LIRE prixAchat
 
     sommeTotal += prixAchat
 
-SI sommeTotal % 5 != 0
-    ALORS billetDe5 = ((int)sommeTotal / 5) + 1
+    SI sommeTotal % 5 != 0
+        ALORS billetDe5 = ((int)sommeTotal / 5) + 1
 
-SINON
-    billetDe5 = sommeTotal / 5
-
+        SINON
+            billetDe5 = sommeTotal / 5
+    FIN SI
 FIN TANT QUE
 
     totalBilletDe5 = billetDe5 * 5
@@ -722,45 +736,39 @@ X et Y nous sont donnés par la formule suivante, si n est le nombre de chevaux 
 X = n! / (n - p)! 
 Y = n! / (p! * (n – p)!)
 
-Cet algorithme peut être écrit d’une manière simple, mais relativement peu performante. Ses performances peuvent être singulièrement augmentées par une petite astuce. Vous commencerez par écrire la manière la plus simple, puis vous identifierez le problème, et écrirez une deuxième version permettant de d’améliorer les performances de l’algorithme.
-
 ```
 VARIABLES
+
 chevauxPartants est un ENTIER
 chevauxJoues est un ENTIER
-i = 1 est un ENTIER
 factorielleChevauxPartants = 1 est un ENTIER
-i2 = 1 est un ENTIER
 factorielleChevauxJoues = 1 est un ENTIER
-i3 = 1 est un ENTIER
-diff = 1 est un ENTIER
-factorielleDiff = 1 est un ENTIER
+difference = 1 est un ENTIER
+factorielleDifference = 1 est un ENTIER
 X est un REEL
 Y est un REEL
 
 TRAITEMENT
+
 ECRIRE "Saisissez le nombre de chevaux partants"
 LIRE chevauxPartants
 ECRIRE "Saisissez le nombre de chevaux joués"
 LIRE chevauxJoues
 
-TANT QUE i <= chevauxPartants
+POUR i de 1 à chevauxPartants; i++
 		factorielleChevauxPartants *= i
-		i++
 		
-TANT QUE i2 <= chevauxJoues
-		factorielleChevauxJoues *= i2
-		i2++
+POUR i de 1 à chevauxJoues; i++
+		factorielleChevauxJoues *= i
 		
-		diff = chevauxPartants - chevauxJoues
+		difference = chevauxPartants - chevauxJoues
 		
-TANT QUE i3 <= diff
-		factorielleDiff *= i3;
-		i3++
+POUR i de 1 à difference; i++
+		factorielleDifference *= i
 		
 		X = factorielleChevauxPartants / factorielleDiff
 		
-		Y = factorielleChevauxPartants / (factorielleChevauxJoues * factorielleDiff)
+		Y = factorielleChevauxPartants / (factorielleChevauxJoues * factorielleDifference)
 
 ECRIRE "Dans l'ordre : une chance sur ", X, " de gagner"
 ECRIRE "Dans le désordre : une chance sur ", Y, " de gagner"
@@ -810,7 +818,7 @@ TRAITEMENT
 ECRIRE "Entrez le nombre de valeur que vous comptez saisir : "
 LIRE limiteTableau
 
-tableau content [limiteTableau] ENTIER
+tableau contient [limiteTableau] ENTIER
 
 ECRIRE "Saisissez vos valeurs : "
 
@@ -1118,4 +1126,24 @@ FIN SI
 
 ECRIRE valeurUtilisateur + " " + uniteMesure + " = " + resultatValeur + " " + resultatUniteMesure
 ```
+
+# Exercice 5.3.1
+
+Soit “X” une valeur à convertir.
+
+Formule °F vers °C : °C = (X − 32) * 5/9
+Formule °C vers °F : °F = (X  9/5) + 32
+L’utilisateur saisit une valeur numérique comprise entre -459.67 et 5 000 000 suivi de l’unité de température : - C pour Celsius - F pour Fahrenheit
+
+La valeur et l’unité de température sont séparés par un espace (exemple: 32 C pour 32 degrés Celsius).
+
+Si la valeur est hors limite, l’utilisateur est invité à saisir une nouvelle valeur.
+
+Le programme affiche le résultat de la conversion sous forme de nombre réel double précision.
+
+Pour information, le zéro absolu correspond à -459.67 Degrés Fahrenheit ou -273.15 degrés Celsius.
+
+```
+VARIABLES
+
 
