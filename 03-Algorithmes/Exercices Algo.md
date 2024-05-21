@@ -1087,3 +1087,35 @@ Si aucune unité de mesure n’est indiquée, le programme considère la valeur 
 
 ```
 VARIABLES
+uniteMesure est un STRING
+resultatUniteMesure est un STRING
+valeurUtilisateur est un DOUBLE
+resultatValeur est un DOUBLE
+
+TRAITEMENT
+
+FAIRE 
+ECRIRE "Saisissez une valeur comprise entre 0.01 et 1 000 000 : "
+LIRE valeurUtilisateur
+
+SI valeurUtilisateur < 0.01 || valeurUtilisateur > 1000000
+    ALORS ECRIRE "Erreur"
+FIN SI
+
+TANT QUE valeurUtilisateur < 0.01 || valeurUtilisateur > 1000000
+
+ECRIRE "Saisissez son unité de mesure : "
+LIRE uniteMesure
+
+SI uniteMesure = "mi"
+    ALORS resultatValeur = valeurUtilisateur * 1.621
+          resultatUniteMesure = "km"
+
+    SINON
+        resultatValeur = valeurUtilisateur / 1.621
+        resultatUniteMesure = "mi"
+FIN SI
+
+ECRIRE valeurUtilisateur + " " + uniteMesure + " = " + resultatValeur + " " + resultatUniteMesure
+```
+

@@ -6,8 +6,7 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		double valeurKm;
-		double valeurMi;
+
 		String uniteMesure;
 		String resultatUniteMesure;
 		double valeurUtilisateur;
@@ -17,24 +16,25 @@ public class App {
 		do {
 			System.out.print("Saisissez une valeur comprise entre 0.01 et 1 000 000 : ");
 			valeurUtilisateur = sc.nextFloat();
+			if (valeurUtilisateur < 0.01 || valeurUtilisateur > 1000000) {
+				System.out.println("Erreur");
+			}
 			}
 			while (valeurUtilisateur < 0.01 || valeurUtilisateur > 1000000);
 		
 		System.out.print("Saisissez son unité de mesure : ");
 		uniteMesure = sc.next();
 		
-		valeurKm = valeurUtilisateur * 1.609;
-		valeurMi = valeurUtilisateur / 1.621;
 		
-		if(uniteMesure == "mi") {
-			resultatValeur = valeurKm;
+		if(uniteMesure.equals("mi")) {                   // .equal ça renvoie une valeur booléenne true or false
+			resultatValeur = valeurUtilisateur * 1.621;
 			resultatUniteMesure = "km";
 		}
-		else
-			uniteMesure = "km";
-			resultatValeur = valeurMi;
-			resultatUniteMesure = "mi";
 		
+		else {
+			resultatValeur = valeurUtilisateur / 1.621;
+			resultatUniteMesure = "mi";
+		}
 			
 			System.out.println(valeurUtilisateur + " " + uniteMesure + " = " + resultatValeur + " " + resultatUniteMesure);
 
