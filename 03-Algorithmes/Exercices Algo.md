@@ -986,3 +986,42 @@ FIN POUR
 ECRIRE "La valeur la plus grande du tableau est : " + valeurPlusGrande + " et se trouve en : " + indexValeurPlusGrande
 ```
 
+# Exercice 4.9 : Recherche spécifique dans un tableau
+
+Toujours et encore sur le même principe, écrivez un algorithme permettant, à l’utilisateur de saisir les notes d’une classe. Le programme, une fois la saisie terminée, renvoie le nombre de ces notes supérieures à la moyenne de la classe.
+
+```
+VARIABLES
+
+limiteTableau est un ENTIER
+somme est un REEL
+moyenne est un REEL
+notesSuperieuresMoyenne est un ENTIER
+
+TRAITEMENT
+
+ECRIRE "Entrez le nombre de valeur que vous comptez saisir : "
+LIRE limiteTableau
+
+tableau contient  [limiteTableau] REELS
+
+ECRIRE "Saisissez vos valeurs : "
+POUR i de 0 à limiteTableau; i++
+LIRE tableau[i]
+FIN POUR
+
+POUR i de 0 à limiteTableau; i++
+somme += tableau[i]
+FIN POUR
+
+moyenne =+ somme / limiteTableau
+
+POUR i de 0 à limiteTableau
+    SI tableau [i] > moyenne
+    ALORS notesSuperieuresMoyenne ++
+    FIN SI
+FIN POUR
+
+ECRIRE "Le nombre de notes supérieures à la moyenne est de : " + notesSuperieuresMoyenne
+```
+

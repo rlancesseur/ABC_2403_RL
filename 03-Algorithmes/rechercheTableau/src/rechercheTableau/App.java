@@ -16,6 +16,7 @@ public class App {
 		
 		int tableau[] = new int[limiteTableau];
 		
+		System.out.println("Saisissez vos valeurs : ");
 		for (int i = 0; i < limiteTableau; i++)
 		{
 			tableau[i] = sc.nextInt();
@@ -29,7 +30,7 @@ public class App {
 			}
 		}
 		
-		System.out.print("La valeur la plus grande du tableau est : " + valeurPlusGrande + " et se trouve en : " + indexValeurPlusGrande);
+		System.out.print("La valeur la plus grande du tableau est : " + valeurPlusGrande + " et se trouve en position : " + indexValeurPlusGrande);
 		
 		sc.close();
 
