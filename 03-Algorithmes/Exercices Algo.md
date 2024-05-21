@@ -1057,12 +1057,20 @@ VARIABLES
 
 valeurKm est un DOUBLE
 valeurMi est un DOUBLE
+q est un DOUBLE
 
 FAIRE
 ECRIRE "Saisissez une valeur en kilomètres comprise entre 0.01 et 1 000 000 : "
 LIRE valeurKm
 
+SI valeurKm < 0.01 || valeurKm > 1000000
+    ALORS ECRIRE "valeur incorrect"
+FIN SI
+
 TANT QUE valeurKm < 0.01 || valeurKm > 1000000
+
+SI valeurKm == q
+    ALORS Fin du programme
 
 valeurMi = valeurKm / 1.609
 
