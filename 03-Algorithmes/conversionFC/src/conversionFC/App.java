@@ -30,12 +30,12 @@ public class App {
 		conversionCtoF = (valeurUtilisateur * 9/5) + 32;
 		
 		
-		if(uniteUtilisateur.contains("C") || uniteUtilisateur.contains("Celsius")) {
+		if(uniteUtilisateur.toUpperCase().contains("C") || uniteUtilisateur.toUpperCase().contains("Celsius")) {
 			valeurApresConversion = conversionCtoF;
 			uniteApresConversion = "F";
 		}
 		
-		if(uniteUtilisateur.contains("F") || uniteUtilisateur.contains("Fahrenheit")) {
+		if(uniteUtilisateur.toUpperCase().contains("F") || uniteUtilisateur.toUpperCase().contains("Fahrenheit")) {
 			valeurApresConversion = conversionFtoC;
 			uniteApresConversion = "C";
 		}
