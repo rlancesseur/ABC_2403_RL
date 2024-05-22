@@ -10,7 +10,6 @@ public class App {
 		int minimum;
 		int maximum;
 		int difference;
-		int valeur;
 		double conversionFtoC;
 		double conversionCtoF;
 		Scanner sc = new Scanner(System.in);
