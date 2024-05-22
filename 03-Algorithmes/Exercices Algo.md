@@ -1198,5 +1198,57 @@ La commande quit permet de quitter le programme.
 
 Tant que cette commande n’est pas saisie, l’utilisateur peut continuer à faire des conversions.
 
+```
 VARIABLES
 
+uniteUtilisateur est un STRING
+minimum est un REEL
+maximum est un REEL
+difference est un REEL
+
+TRAITEMENT
+
+FAIRE
+ECRIRE "Saisissez une unité de mesure (C ou F) : "
+LIRE uniteUtilisateur
+
+SI uniteUtilisateur contient "quit"
+    ALORS le programme s'arrête 
+FIN SI
+
+SI uniteUtilisateur ne contient ni C ni F
+    ALORS ECRIRE "Erreur"
+FIN SI
+
+TANT QUE uniteUtilisateur ne contient ni C ni F
+
+ECRIRE "Saisissez une plage de valeurs : "
+ECRIRE "Minimum : "
+LIRE minimum
+ECRIRE "Maximum : "
+LIRE maximum
+
+difference = (maximum - minimum) + 1
+
+tableau contient [difference] REEL
+
+POUR i de 0 à difference; i++
+tableau[i] = minimum + i
+FIN POUR
+
+ECRIRE "Après conversion, les valeurs de cette plage sont : "
+
+tableauConversion contient [difference] REEL
+
+POUR i de 0 à difference; i++
+    SI uniteUtilisateur contient "C"
+        tableauConversion[i] = tableau[i] * 9/5 + 32
+        ECRIRE tableauConversion[i], " F"
+    FIN SI
+
+    SI uniteUtilisateur contient "F"
+        tableauConversion[i] = (tableau[i] - 32) * 5/9
+        ECRIRE tableauConversion[i], " C"
+    FIN SI
+FIN POUR
+```
