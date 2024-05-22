@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class App {
 
 	
-	  public static int getPGCD(int numerateur, int denominateur) {
+	  public static long getPGCD(long numerateur, long denominateur) {
    	   
-   	   int pgcd=1;
-   	   int a=numerateur;
-   	   int b= denominateur;
+		  long pgcd=1;
+		  long a=numerateur;
+		  long b= denominateur;
    	   
    	   if (a!=0 && b!=0) {
    	      if (a < 0)
@@ -76,7 +76,7 @@ public class App {
 		System.out.println("Dans le desordre : une chance sur " + Y + " de gagner ");
    	 
 
-	   /* int diviseurCommun = getPGCD(factorielleChevauxPartants, factorielleChevauxJoues);
+	    /*long diviseurCommun = App.getPGCD(factorielleChevauxPartants, factorielleChevauxJoues);
 	    
 		numX = factorielleChevauxPartants;
 		
@@ -84,8 +84,8 @@ public class App {
 				
 		
 		System.out.println("Dans l'ordre : " + numX + " chance sur " + denomX + " de gagner soit :"+ numX+"/"+denomX + " diviseur "+ diviseurCommun);
-		System.out.println("Dans le désordre : une chance sur " + Y + " de gagner");
-		*/
+		System.out.println("Dans le désordre : une chance sur " + Y + " de gagner");*/
+		
 		
 		sc.close();
 	}
