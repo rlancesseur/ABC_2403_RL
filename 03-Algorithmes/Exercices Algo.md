@@ -1146,4 +1146,43 @@ Pour information, le zéro absolu correspond à -459.67 Degrés Fahrenheit ou -2
 ```
 VARIABLES
 
+valeurUtilisateur est un REEL
+uniteUtilisateur est un STRING
+conversionFtoC est un REEL
+conversionCtoF est un REEL
+valeurApresConversion est un REEL
+uniteApresConversion est un STRING
+
+TRAITEMENT
+
+FAIRE
+ECRIRE "Saisissez une valeur comprise entre -459.67 et 5 000 000 suivi d'un espace et de C ou F : "
+LIRE valeurUtilisateur
+LIRE uniteUtilisateur
+
+SI valeurUtilisateur < -459.67 || valeurUtilisateur > 5000000
+    ALORS ECRIRE "Erreur"
+FIN SI
+
+TANT QUE valeurUtilisateur < -459.67 || valeurUtilisateur > 5000000
+
+conversionFtoC = (valeurUtilisateur - 32) * 5/9
+conversionCtoF = (valeurUtilisateur * 9/5) + 32
+
+SI valeurUtilisateur.contains("C")
+    ALORS valeurApresConversion = conversionCtoF
+          uniteApresConversion = "F"
+FIN SI
+
+SI valeurUtilisateur.contains("F")
+    ALORS valeurApresConversion = conversionFtoC
+          uniteApresConversion = "C"
+FIN SI 
+
+SI valeurUtilisateur == -459.67 || valeurUtilisateur == -273.15
+    ALORS ECRIRE "Vous avez atteint le Zéro absolu."
+FIN SI
+
+ECRIRE valeurUtilisateur, " ", uniteUtilisateur, " devient ", valeurApresConversion, " ", uniteApresConversion
+```
 
