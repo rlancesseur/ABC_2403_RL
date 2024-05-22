@@ -1127,7 +1127,7 @@ FIN SI
 ECRIRE valeurUtilisateur + " " + uniteMesure + " = " + resultatValeur + " " + resultatUniteMesure
 ```
 
-# Exercice 5.3.1
+# Exercice 5.3.1 : Conversion Degrés Fahrenheit (°F) <–> Degrés Celsius (°C)
 
 Soit “X” une valeur à convertir.
 
@@ -1185,4 +1185,18 @@ FIN SI
 
 ECRIRE valeurUtilisateur, " ", uniteUtilisateur, " devient ", valeurApresConversion, " ", uniteApresConversion
 ```
+
+# Exercice 5.3.2 : Conversion Degrés Fahrenheit (°F) <–> Degrés Celsius (°C)
+
+L’utilisateur saisit une unité de mesure (C ou F).
+
+Il saisit ensuite une plage de valeurs (minimum, maximum).
+
+Une fois les 2 valeurs saisies, le programme convertit toute la plage de valeur et affiche le résultat de chaque conversion.
+
+La commande quit permet de quitter le programme.
+
+Tant que cette commande n’est pas saisie, l’utilisateur peut continuer à faire des conversions.
+
+VARIABLES
 
