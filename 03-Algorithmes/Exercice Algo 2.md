@@ -1,3 +1,29 @@
+# Exercice 2a.1 : Tri de nombres
+
+Lire 2 nombres entier A et B puis les afficher dans l’ordre croissant.
+
+```
+VARIABLES
+
+A est un ENTIER
+B est un ENTIER
+
+TRAITEMENT
+
+ECRIRE "Saisissez un nombre : "
+LIRE A
+
+ECRIRE "Saisissez un nombre : "
+LIRE B
+
+SI A < B
+    ECRIRE A, " ", B
+
+    SINON
+        ECRIRE B, " ", A
+FIN SI
+```
+
 # Exercice 2a.5 : Ma bicyclette
 
 Réalisez l’algorithme et le programme correspondant au texte ci-dessous :
