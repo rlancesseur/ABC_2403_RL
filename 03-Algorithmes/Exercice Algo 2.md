@@ -24,6 +24,29 @@ SI A < B
 FIN SI
 ```
 
+# Exercice 2a.2 : Es-tu majeur ?
+
+Lire un nombre A correspondant à un âge (en années).
+Afficher “Vous êtes majeur” ou “Vous êtes mineur” selon le cas.
+Pour un nombre négatif le message doit être “Vous n’êtes pas encore né”.
+
+VARIABLES
+
+age est un ENTIER
+
+TRAITEMENT
+
+SI age < 0
+    ECRIRE "Vous n'êtes pas encore né."
+
+    SINON SI age >= 0 && age < 18
+        ECRIRE "Vous êtes mineur."
+
+        SINON
+            ECRIRE "Vous êtes majeur."
+FIN SI
+```
+
 # Exercice 2a.5 : Ma bicyclette
 
 Réalisez l’algorithme et le programme correspondant au texte ci-dessous :
