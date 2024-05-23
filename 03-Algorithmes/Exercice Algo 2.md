@@ -70,6 +70,39 @@ SINON
         FIN SI
 ```
 
+# Exercice 3a.1 : Contrôler la saisie
+
+L’utilisateur est invité à saisir son prénom.
+
+Le programme affiche ensuite “Bonjour” suivi du prénom saisi.
+
+Le prénom doit contenir au moins 2 caractères.
+
+Si le prénom contient moins de 2 caractères, l’utilisateur doit recommencer la saisie.
+
+L’utilisateur dispose d’un nombre d’essai illimité.
+
+```
+VARIABLES
+
+prenom est un STRING
+
+TRAITEMENT
+
+ECRIRE "Saisissez votre prénom : "
+LIRE prenom
+
+SI prenom.length() < 2
+    POUR i de 0 à 5; i++
+        ECRIRE "Le prénom doit contenir au moins 2 caractères"
+        LIRE prenom
+    FIN POUR
+
+
+SINON
+    ECRIRE "Bonjour " + prenom
+```
+
 # Exercice 3a.4 : Recherche des diviseurs d’un nombre.
 
 Lire un nombre entier et afficher tous ses diviseurs autres que 1 et lui-même.
