@@ -9,7 +9,6 @@ public class App {
 		String prenom;
 		Scanner sc = new Scanner(System.in);
 		
-		
 		System.out.print("Saisissez votre prénom : ");
 		prenom = sc.next();
 		
