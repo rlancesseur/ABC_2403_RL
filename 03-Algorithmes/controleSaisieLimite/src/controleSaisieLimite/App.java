@@ -6,24 +6,31 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		String motDePasse = "formation";
+		
 		String saisieUtilisateur;
+		int essais = 0;
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Saisissez un mot de passe : ");
-		saisieUtilisateur = sc.next();
-		
-		if (saisieUtilisateur != motDePasse) {
-			for (int i = 0; i < 3; i++)
-			{
-				System.out.println("Mot de passe invalide");
-				saisieUtilisateur = sc.next();
+		do {
+			System.out.print("Saisissez un mot de passe : ");
+			saisieUtilisateur = sc.next();
+			essais ++;
+			
+			if (saisieUtilisateur.equals("formation")) {
+				System.out.println("Vous êtes connecté.");
+				break;
+			}
+			
+			else if (!saisieUtilisateur.equals("formation")) {
+				System.out.println("Erreur.");
 			}
 		}
+			while (essais < 3);
 		
-		else 
-			System.out.println("Vous êtes connecté.");
-		
+		if(essais == 3) {
+			System.out.println("Votre compte est bloqué.");
+		}			
+		 
 		sc.close();
 		
 	}
