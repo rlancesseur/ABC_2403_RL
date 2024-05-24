@@ -14,9 +14,9 @@ public class App {
 		
 		
 			if (prenom.length() < 2) {
-				for (int i = 0; i < 5; i++)
+				for (int i = 0; i < 3; i++)
 				{
-					System.out.println("Le prénom doit contenir au moins 2 caractères");
+					System.out.print("Le prénom doit contenir au moins 2 caractères, veuillez recommencer : ");
 					prenom = sc.next();
 				}
 			}

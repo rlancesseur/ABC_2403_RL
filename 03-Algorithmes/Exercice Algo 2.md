@@ -83,6 +83,30 @@ SINON
     ECRIRE "La valeur fournie n'est pas un âge valide."
 ```
 
+# Exercice 2a.4 : Tri de nombres++
+
+Lire 3 nombres entier A, B et C puis les afficher dans l’ordre décroissant.
+
+```
+VARIABLES
+
+A est un ENTIER
+B est un ENTIER
+C est un ENTIER
+
+TRAITEMENT
+
+ECRIRE "Saisissez un premier nombre : "
+LIRE A
+ECRIRE "Saisissez un deuxième nombre : "
+LIRE B
+ECRIRE "Saisissez un troisième nombre : "
+LIRE C
+
+```
+
+
+
 # Exercice 2a.5 : Ma bicyclette
 
 Réalisez l’algorithme et le programme correspondant au texte ci-dessous :
@@ -178,8 +202,8 @@ ECRIRE "Saisissez votre prénom : "
 LIRE prenom
 
 SI prenom.length() < 2
-    POUR i de 0 à 5; i++
-        ECRIRE "Le prénom doit contenir au moins 2 caractères"
+    POUR i de 0 à 3; i++
+        ECRIRE "Le prénom doit contenir au moins 2 caractères, veuillez recommencer : "
         LIRE prenom
     FIN POUR
 
