@@ -30,6 +30,7 @@ Lire un nombre A correspondant à un âge (en années).
 Afficher “Vous êtes majeur” ou “Vous êtes mineur” selon le cas.
 Pour un nombre négatif le message doit être “Vous n’êtes pas encore né”.
 
+```
 VARIABLES
 
 age est un ENTIER
@@ -45,6 +46,41 @@ SI age < 0
         SINON
             ECRIRE "Vous êtes majeur."
 FIN SI
+```
+
+# Exercice 2a.3 : Ma retraite
+
+Lire un nombre A correspondant à un âge (en années).
+Selon l’âge fourni, le programme doit afficher l’un des messages suivants :
+Vous êtes à la retraite depuis X années
+Il vous reste X années avant la retraite.
+C’est le moment de prendre sa retraite.
+La valeur fournie n’est pas un âge valide.
+
+```
+VARIABLES
+
+age est un ENTIER
+retraiteApres est un ENTIER
+retraiteAvant est un ENTIER
+
+TRAITEMENT
+
+ECRIRE "Saisissez votre âge : "
+LIRE age
+
+retraiteApres = age - 60
+retraiteAvant = 60 - age
+
+SI age > 60
+    ECRIRE "Vous êtes à la retraite depuis ", retraiteApres, " années."
+SI age < 60
+    ECRIRE "Il vous reste ", retraiteAvant, " années avant la retraite."
+SI age = 60
+    ECRIRE "C'est le moment de prendre sa retraite."
+
+SINON 
+    ECRIRE "La valeur fournie n'est pas un âge valide."
 ```
 
 # Exercice 2a.5 : Ma bicyclette
