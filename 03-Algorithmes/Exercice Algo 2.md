@@ -103,9 +103,33 @@ LIRE B
 ECRIRE "Saisissez un troisième nombre : "
 LIRE C
 
+SI A > B && B > C
+    max = A
+	moy = B
+	min = C
+
+SINON SI B > A && A > C
+	max = B
+	moy = A
+	min = C
+
+SINON SI A > C && C > B
+	max = A
+	moy = C
+	min = B
+
+SINON SI C > B && B > A
+	max = C
+	moy = B
+	min = A
+
+SINON SI C > A && A > B
+	max = C
+	moy = A
+	min = B
+
+ECRIRE max + ", " + moy + ", " + min
 ```
-
-
 
 # Exercice 2a.5 : Ma bicyclette
 
@@ -182,13 +206,9 @@ SINON
 # Exercice 3a.1 : Contrôler la saisie
 
 L’utilisateur est invité à saisir son prénom.
-
 Le programme affiche ensuite “Bonjour” suivi du prénom saisi.
-
 Le prénom doit contenir au moins 2 caractères.
-
 Si le prénom contient moins de 2 caractères, l’utilisateur doit recommencer la saisie.
-
 L’utilisateur dispose d’un nombre d’essai illimité.
 
 ```
@@ -207,7 +227,6 @@ SI prenom.length() < 2
         LIRE prenom
     FIN POUR
 
-
 SINON
     ECRIRE "Bonjour " + prenom
 ```
@@ -215,15 +234,10 @@ SINON
 # Exercice 3a.2 : Contrôler la saisie avec limite
 
 L’utilisateur est invité à saisir un mot de passe.
-
 Si le mot de passe saisi est correct, le programme affiche “Vous êtes connecté”.
-
 Dans le cas contraire, l’utilisateur doit recommencer la saisie.
-
 L’utilisateur dispose de 3 essais maximum.
-
 Au 3ème échec, le programme affiche “Votre compte est bloqué” et se termine.
-
 Note : Le bon mot de passe est formation
 
 ```
