@@ -265,6 +265,35 @@ SI essais = 3
     ECRIRE "Votre compte est bloqué."
 ```
 
+# Exercice 3a.3 : Intervalle entre 2 nombres.
+
+Lire 2 nombres entier A et B puis afficher tous les nombres entier dans l’intervalle.
+
+```
+VARIABLES
+
+A est un ENTIER
+B est un ENTIER
+
+TRAITEMENT
+
+SI A > B
+    ECRIRE "Résultat : "
+        TANT QUE A != B
+            A -= 1
+            ECRIRE A, " "
+        FIN TANT QUE
+FIN SI
+
+SI B > A
+    ECRIRE "Résultat : "
+        TANT QUE B != A
+            A += 1
+            ECRIRE A, " "
+        FIN TANT QUE
+FIN SI
+```
+
 # Exercice 3a.4 : Recherche des diviseurs d’un nombre.
 
 Lire un nombre entier et afficher tous ses diviseurs autres que 1 et lui-même.
