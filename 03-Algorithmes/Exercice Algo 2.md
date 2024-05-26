@@ -319,4 +319,34 @@ POUR i de 2 à moitie; i++
     FIN SI
 ```
 
+# Exercice 5.1 : Rechercher un nombre dans un tableau
+
+Soit un tableau de nombres entier triés par ordre croissant.
+Exemple: [8, 16, 32, 64, 128, 256, 512]
+Chercher si un nombre donné N figure parmi les éléments.
+Si oui, afficher la valeur de l’indice correspondant. Sinon, afficher « Nombre non trouvé ».
+
+```
+VARIABLES
+
+N est un ENTIER
+resultat = false est un BOOLEEN
+
+tableau contient {8, 16, 32, 64, 128, 256, 512}
+
+ECRIRE "Saisissez un nombre : "
+LIRE N
+
+POUR i de 0 à tableau.length, i++
+    SI N == tableau[i]
+        ECRIRE "La valeur se trouve à l'indice " + i + " dans le tableau."
+        resultat = true
+    FIN SI
+FIN POUR
+
+SI !resultat
+    ECRIRE "Nombre non trouvé."
+```
+
+
 
