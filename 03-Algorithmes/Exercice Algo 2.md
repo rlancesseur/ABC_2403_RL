@@ -399,9 +399,17 @@ Compter et afficher le nombre d’occurrences (d’apparitions) de chacune des l
 VARIABLES
 
 texte est un STRING
+compteur est un ENTIER
 
 TRAITEMENT
 
+ECRIRE "Saisissez un texte d'au moins 120 caractères : "
+LIRE texte
+
+TANT QUE texte.length < 120
+    ECRIRE "Le texte doit contenir au moins 120 caractère, veuillez réessayer : "
+    LIRE texte
+FIN TANT QUE
 
 ```
 
