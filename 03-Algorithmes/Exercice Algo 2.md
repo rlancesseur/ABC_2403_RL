@@ -411,5 +411,17 @@ TANT QUE texte.length < 120
     LIRE texte
 FIN TANT QUE
 
-```
+alphabet est un tableau de STRING qui contient abcdefghijklmnopqrstuvwxyz
 
+compteur est un tableau qui contient texte.length
+
+POUR i de 0 à texte.length; i++
+    POUR j de 0 à alphabet.length, i++
+        SI tableau[i].contains(alphabet[j])
+        compteur[j] += 1
+    FIN POUR
+FIN POUR
+
+POUR i de 0 à alphabet.length; i++
+ECRIRE ("La lettre " + alphabet[i] + " apparait " + compteur[i] + " fois dans le texte.")
+```

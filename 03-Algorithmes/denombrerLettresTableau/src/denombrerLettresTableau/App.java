@@ -9,6 +9,7 @@ public class App {
 		String texte;
 		Scanner sc = new Scanner(System.in);
 		
+		
 		System.out.print("Saisissez un texte d'au moins 120 caractères : ");
 		texte = sc.next();
 		
@@ -17,14 +18,19 @@ public class App {
 			texte = sc.next();
 		}
 		
+		
 		String alphabet[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
-		String compteur[] = new String[1000];
+		
+		int compteur[] = new int[texte.length()];
 		
 		String tableau[] = texte.split("");
-		for (int i = 0; i < tableau.length; i++) 
+		
+		for (int i = 0; i < texte.length(); i++) 
 		{
-			if(alphabet[i].contains(tableau[i])) {
-				compteur[i] += 1;
+			for (int j = 0; j < alphabet.length; j ++) {
+				if(tableau[i].contains(alphabet[j])) {
+					compteur[j] += 1;
+				}
 			}
 		}
 		for (int i = 0; i < alphabet.length; i++) {
