@@ -15,8 +15,9 @@ public class App {
 		for (int i = 0; i < 10; i++)
 		{
 			tableau[i] = sc.nextFloat();
-			sommeValeurs += tableau[i];
 		}
+		
+		sommeValeurs = App.somme(sommeValeurs, tableau);
 		
 		System.out.print("La somme des valeurs du tableau est de " + sommeValeurs);
 		
@@ -24,4 +25,14 @@ public class App {
 
 	}
 
+	public static float somme(float sommeValeurs, float tableau[]) {
+		
+		for (int i = 0; i < 10; i++)
+		{
+			sommeValeurs += tableau[i];
+		}
+		
+		return sommeValeurs;
+	}
+	
 }
