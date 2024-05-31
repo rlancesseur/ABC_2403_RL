@@ -1,40 +1,41 @@
 package fruitsEtLegumes;
 
-import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
 
 	public static void main(String[] args) {
 		
-		String legumes1;
-		float moinsCher = 0;
-		String[] tableau;
 		Scanner sc = new Scanner(System.in);		
+		String saisieUtilisateur;
+		String[] legumesPrix = new String[1];
+		String[] legumesPrix2;
 		
-		ArrayList<String> legumes = new ArrayList<String>();
-
+		do {
+			System.out.print("Saisissez un légume : ");
+			saisieUtilisateur = sc.nextLine();
+			
+			if(!saisieUtilisateur.equals("go")) {
+				legumesPrix[legumesPrix.length - 1] = saisieUtilisateur;
+				legumesPrix2 = new String [legumesPrix.length +1];
+				System.arraycopy(legumesPrix, 0, legumesPrix2, 0, legumesPrix.length);
+				legumesPrix = legumesPrix2;
+			}
+		}
+		while(!saisieUtilisateur.equals("go"));
 		
-		while (!legumes.contains("go")) {
-		
-		System.out.print("Saisissez un légume et son prix au kilo : ");
-		legumes1 = sc.next();
-		tableau = legumes1.split(" ");
+		for (int i = 0; i < legumesPrix.length; i++) {
+			System.out.println(legumesPrix[i]);
 		}
 		
+		/* POUR PARCOURIR UN TABLEAU A L'ENVERS
+		for (int i = legumesPrix.length - 1; i >= legumesPrix.length; i--) {
+			
+		} */
 		
-		for (int i = 0; i < tableau.length; i++) {
-			
-			System.out.println(tableau[i]);
-			
-			/*if (moinsCher < tableauPrix[i]) {
-				tableauPrix[i] = moinsCher;
-			*/
-			}		
 		
 		sc.close();
-
+		
 	}
 
 }
