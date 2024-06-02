@@ -25,14 +25,8 @@ public class App {
 		
 		String tableau[] = texte.split("");
 		
-		for (int i = 0; i < texte.length(); i++) 
-		{
-			for (int j = 0; j < alphabet.length; j ++) {
-				if(tableau[i].contains(alphabet[j])) {
-					compteur[j] += 1;
-				}
-			}
-		}
+		App.compteur(texte, alphabet, tableau, compteur);
+		
 		for (int i = 0; i < alphabet.length; i++) {
 		System.out.println("La lettre " + alphabet[i] + " apparait " + compteur[i] + " fois dans le texte.");
 		}
@@ -41,4 +35,18 @@ public class App {
 		
 	}
 
+	
+	public static void compteur(String texte, String alphabet[], String tableau[], int compteur[]) {
+		
+		for (int i = 0; i < texte.length(); i++) 
+		{
+			for (int j = 0; j < alphabet.length; j ++) {
+				if(tableau[i].contains(alphabet[j])) {
+					compteur[j] += 1;
+				}
+			}
+		}
+		
+	}
+	
 }
