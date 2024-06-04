@@ -16,7 +16,7 @@ public class App {
 		
 		System.out.println(resultat);
 		
-		phrase = App.ConcatenerPrenomNom(prenom, nom);
+		phrase = App.concatenerPrenomNom(prenom, nom);
 		
 		System.out.println(phrase);
 		
@@ -38,12 +38,10 @@ public class App {
 		
 	}
 	
-	public static String ConcatenerPrenomNom(String prenom, String nom) {
+	public static String concatenerPrenomNom(String prenom, String nom) {
 		
 		String retour;
-		
-		retour = prenom + " " + nom;
-		
+		retour = prenom + "." + nom;
 		return retour;
 		
 	}
