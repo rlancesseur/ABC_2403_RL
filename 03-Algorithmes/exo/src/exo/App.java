@@ -7,8 +7,16 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		App.afficherJourHeures();
-
+		String prenom = "Mickaël";
+		String nom = "Devoldere";
+		String phrase;
+		
+		phrase = App.ConcatenerPrenomNom(prenom, nom);
+		
+		System.out.println(phrase);
+		
+		App.afficherJourHeures();		
+		
 	}
 
 	public static void afficherJourHeures() {
@@ -16,6 +24,16 @@ public class App {
 		SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	    Date date = new Date();
 	    System.out.println("On est le " + s.format(date));
+		
+	}
+	
+	public static String ConcatenerPrenomNom(String prenom, String nom) {
+		
+		String retour;
+		
+		retour = prenom + " " + nom;
+		
+		return retour;
 		
 	}
 	
