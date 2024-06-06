@@ -4,11 +4,15 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Bouteille b = new Bouteille();
+		Bouteille bouteille1 = new Bouteille();
 		
-		float res = b.donneContenanceEnCl();
+		Bouteille bouteille2 = new Bouteille(1.2f, 0.8f, true, "h2O");
+		
+		Bouteille bouteille3 = new Bouteille(bouteille2);
+		
+		float contenanceEnCLDeBouteille2 = bouteille2.donneContenanceEnCl();
 
-		float res2 = b.donneContenueEnCL();
+		float contenuEnCLDeBouteille2 = bouteille2.donneContenueEnCL();
 		
 	}
 

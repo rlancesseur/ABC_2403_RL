@@ -2,40 +2,89 @@ package bouteillesObjet;
 
 public class Bouteille {
 	
+	//attributes
+	
 	private float contenanceEnL;
 	private float contenuEnL;
 	private boolean ouvert;
 	private String typeDuContenue;
 
+	//access/modifier
+	
+	//constructor
+	
+	//constructeur par defaut
+	
+	public Bouteille() {
+		contenanceEnL = 1;
+		contenuEnL = 1;
+		ouvert = false;
+		typeDuContenue = "H2O";
+	}
+	
+	//constructeur classique
+	
+	public Bouteille(float _contenanceEnL, float _contenuEnL, boolean _ouvert, String _typeDuContenue) {
+		this.contenanceEnL = _contenanceEnL;
+		this.contenuEnL = _contenuEnL;
+		this.ouvert = _ouvert;
+		this.typeDuContenue = _typeDuContenue;
+	}
+	
+	//constructeur par recopie ou de clonage
+	
+	public Bouteille(Bouteille _bouteilleARecopier) {
+		this.contenanceEnL = _bouteilleARecopier.contenanceEnL;
+		this.contenuEnL = _bouteilleARecopier.contenuEnL;
+		this.ouvert = _bouteilleARecopier.ouvert;
+		this.typeDuContenue = _bouteilleARecopier.typeDuContenue;
+	}
+	
+	
+	//methods
 	
 	public float donneContenanceEnCl() {
 		
-		float contenanceEnCl = contenanceEnL * 100;
+		float result = this.contenanceEnL * 100;
 		
-		return contenanceEnCl;
+		return result;
 		
 	}
 	
 	public float donneContenueEnCL() {
 		
-		float contenuEnCl = contenuEnL * 100;
+		float result = this.contenuEnL * 100;
 		
-		return contenuEnCl;
+		return result;
 		
 	}
 	
 	public boolean estPleine() {
 		
-		if(contenuEnL == contenanceEnL)
-		return;
+		boolean result;
+		if(this.contenuEnL == this.contenanceEnL) {
+			result = true;
+		}
+		else
+			result = false;
+		
+		return result;
 	}
 	
-	/*
 	public boolean ouvrir() {
 		
+		if(this.ouvert == false) {
+			this.ouvert = true;
+		}
+		return this.ouvert;
 	}
 	
 	public boolean fermer() {
+		
+		if(this.ouvert == true) {
+			this.ouvert = false;
+		}
+		return this.ouvert;
 		
 	}
 	
@@ -43,6 +92,7 @@ public class Bouteille {
 		
 	}
 	
+	/*
 	public boolean laRemplir(float quantite) {
 		
 	}
