@@ -6,7 +6,7 @@ public class App {
 		
 		Bouteille bouteille1 = new Bouteille();
 		
-		Bouteille bouteille2 = new Bouteille(1.2f, 0.8f, true, "h2O");
+		Bouteille bouteille2 = new Bouteille(1.2f, 0.8f, false, "h2O");
 		
 		Bouteille bouteille3 = new Bouteille(bouteille2);
 		
@@ -14,6 +14,12 @@ public class App {
 
 		float contenuEnCLDeBouteille2 = bouteille2.donneContenueEnCL();
 		
+		boolean ouvrirBouteille = bouteille2.ouvrir();
+		
+		boolean fermerBouteille = bouteille2.fermer();
+		
+		boolean bouteilleRempli = bouteille2.laRemplir();
+
 	}
 
 }

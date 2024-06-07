@@ -65,38 +65,71 @@ public class Bouteille {
 		if(this.contenuEnL == this.contenanceEnL) {
 			result = true;
 		}
-		else
+		else {
 			result = false;
+		}
 		
 		return result;
 	}
 	
 	public boolean ouvrir() {
 		
+		boolean result;
 		if(this.ouvert == false) {
 			this.ouvert = true;
+			result = true;
 		}
-		return this.ouvert;
+		else {
+			result = false;
+		}
+		return result;
 	}
 	
+
 	public boolean fermer() {
 		
+		boolean result;
 		if(this.ouvert == true) {
 			this.ouvert = false;
+			result = true;
 		}
-		return this.ouvert;
+		else {
+			result = false;
+		}
+		
+		return result;
 		
 	}
 	
 	public boolean laRemplir() {
 		
+		boolean result;
+		if(contenuEnL < contenanceEnL) {
+			contenuEnL = contenanceEnL;
+			result = true;
+		}
+		else {
+			result = false;
+		}
+		
+		return result;
+	}
+	
+	
+	public boolean laRemplir(float quantite) {
+		
+		boolean result;
+		if(contenuEnL + quantite < contenanceEnL) {
+			contenuEnL += quantite;
+			result = true;
+		}
+		else {
+			result = false;
+		}
+		return result;
 	}
 	
 	/*
-	public boolean laRemplir(float quantite) {
-		
-	}
-	
 	public boolean laVider() {
 		
 	}
