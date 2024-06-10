@@ -10,6 +10,7 @@ public class App {
 		
 		Bouteille bouteille3 = new Bouteille(bouteille2);
 		
+		
 		float contenanceEnCLDeBouteille2 = bouteille2.donneContenanceEnCl();
 
 		float contenuEnCLDeBouteille2 = bouteille2.donneContenueEnCL();
@@ -20,7 +21,7 @@ public class App {
 		
 		boolean bouteilleRempli = bouteille2.laRemplir(0.3f);
 		
-		boolean viderBouteille = bouteille2.laVider(0.8f);
+		boolean bouteillevide = bouteille2.laVider(0.8f);
 
 	}
 

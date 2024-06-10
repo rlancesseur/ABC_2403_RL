@@ -48,16 +48,16 @@ public class Bouteille {
 		float result = this.contenanceEnL * 100;
 		
 		return result;
-		
 	}
+	
 	
 	public float donneContenueEnCL() {
 		
 		float result = this.contenuEnL * 100;
 		
 		return result;
-		
 	}
+	
 	
 	public boolean estPleine() {
 		
@@ -72,6 +72,7 @@ public class Bouteille {
 		return result;
 	}
 	
+	
 	public boolean ouvrir() {
 		
 		boolean result;
@@ -82,6 +83,7 @@ public class Bouteille {
 		else {
 			result = false;
 		}
+		
 		return result;
 	}
 	
@@ -98,13 +100,13 @@ public class Bouteille {
 		}
 		
 		return result;
-		
 	}
+	
 	
 	public boolean laRemplir() {
 		
 		boolean result;
-		if(this.contenuEnL < this.contenanceEnL) {
+		if(this.contenuEnL < this.contenanceEnL && this.ouvert == true) {
 			this.contenuEnL = this.contenanceEnL;
 			result = true;
 		}
@@ -119,20 +121,22 @@ public class Bouteille {
 	public boolean laRemplir(float quantite) {
 		
 		boolean result;
-		if(this.contenuEnL + quantite <= this.contenanceEnL) {
+		if(this.contenuEnL + quantite <= this.contenanceEnL && this.ouvert == true) {
 			this.contenuEnL += quantite;
 			result = true;
 		}
 		else {
 			result = false;
 		}
+		
 		return result;
 	}
+	
 	
 	public boolean laVider() {
 		
 		boolean result;
-		if(this.contenuEnL > 0) {
+		if(this.contenuEnL > 0 && this.ouvert == true) {
 			this.contenuEnL = 0;
 			result = true;
 		}
@@ -141,13 +145,13 @@ public class Bouteille {
 		}
 		
 		return result;
-		
 	}
+	
 	
 	public boolean laVider(float quantite) {
 		
 		boolean result;
-		if(this.contenuEnL - quantite >= 0) {
+		if(this.contenuEnL - quantite >= 0 && this.ouvert == true) {
 			this.contenuEnL -= quantite;
 			result = true;
 		}
@@ -156,7 +160,6 @@ public class Bouteille {
 		}
 		
 		return result;
-		
 	}
 	
 }
