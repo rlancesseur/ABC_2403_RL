@@ -147,7 +147,7 @@ public class Bouteille {
 	public boolean laVider(float quantite) {
 		
 		boolean result;
-		if(this.contenuEnL - quantite > 0) {
+		if(this.contenuEnL - quantite >= 0) {
 			this.contenuEnL -= quantite;
 			result = true;
 		}
