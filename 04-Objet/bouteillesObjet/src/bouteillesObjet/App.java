@@ -18,7 +18,9 @@ public class App {
 		
 		boolean fermerBouteille = bouteille2.fermer();
 		
-		boolean bouteilleRempli = bouteille2.laRemplir();
+		boolean bouteilleRempli = bouteille2.laRemplir(0.3f);
+		
+		boolean viderBouteille = bouteille2.laVider(0.8f);
 
 	}
 

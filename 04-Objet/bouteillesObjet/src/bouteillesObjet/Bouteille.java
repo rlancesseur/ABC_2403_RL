@@ -104,8 +104,8 @@ public class Bouteille {
 	public boolean laRemplir() {
 		
 		boolean result;
-		if(contenuEnL < contenanceEnL) {
-			contenuEnL = contenanceEnL;
+		if(this.contenuEnL < this.contenanceEnL) {
+			this.contenuEnL = this.contenanceEnL;
 			result = true;
 		}
 		else {
@@ -119,8 +119,8 @@ public class Bouteille {
 	public boolean laRemplir(float quantite) {
 		
 		boolean result;
-		if(contenuEnL + quantite < contenanceEnL) {
-			contenuEnL += quantite;
+		if(this.contenuEnL + quantite <= this.contenanceEnL) {
+			this.contenuEnL += quantite;
 			result = true;
 		}
 		else {
@@ -129,13 +129,34 @@ public class Bouteille {
 		return result;
 	}
 	
-	/*
 	public boolean laVider() {
+		
+		boolean result;
+		if(this.contenuEnL > 0) {
+			this.contenuEnL = 0;
+			result = true;
+		}
+		else {
+			result = false;
+		}
+		
+		return result;
 		
 	}
 	
 	public boolean laVider(float quantite) {
 		
-	}*/
+		boolean result;
+		if(this.contenuEnL - quantite > 0) {
+			this.contenuEnL -= quantite;
+			result = true;
+		}
+		else {
+			result = false;
+		}
+		
+		return result;
+		
+	}
 	
 }
