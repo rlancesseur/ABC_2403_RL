@@ -21,7 +21,7 @@ public class App {
 		
 		boolean bouteilleRempli = bouteille2.laRemplir(0.3f);
 		
-		boolean bouteillevide = bouteille2.laVider(0.8f);
+		boolean bouteillevide = bouteille2.laVider(0.5f);
 
 	}
 
