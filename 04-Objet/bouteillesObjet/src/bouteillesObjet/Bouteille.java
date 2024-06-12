@@ -120,15 +120,12 @@ public class Bouteille {
 	
 	public boolean laRemplir(float quantite) {
 		
-		boolean result;
-		if(this.contenuEnL + quantite <= this.contenanceEnL && this.ouvert == true) {
+		boolean result = false;
+		if(this.contenuEnL + quantite <= this.contenanceEnL && this.ouvert) {
 			this.contenuEnL += quantite;
 			result = true;
 		}
-		else {
-			result = false;
-		}
-		
+
 		return result;
 	}
 	
