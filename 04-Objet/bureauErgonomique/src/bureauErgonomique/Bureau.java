@@ -36,12 +36,45 @@ public class Bureau {
 		return result;
 	}
 	
-	public boolean descendreLeBureauNiveau1() {
+	public boolean Niveau1() {
 		
 		boolean result;
-		if(hauteurEnM < hauteurMaxEnM && priseBranche == true) {
-			niveau
+		if(priseBranche == true) {
+			hauteurEnM = (hauteurMaxEnM - hauteurMinEnM) / 2.5f; 
+			result = true;
 		}
+		else {
+			result = false;
+		}
+		
+		return result;
+	}
+	
+	public boolean Niveau2() {
+		
+		boolean result;
+		if(priseBranche == true) {
+			hauteurEnM = (hauteurMaxEnM - hauteurMinEnM) / 2; 
+			result = true;
+		}
+		else {
+			result = false;
+		}
+		return result;
+	}
+	
+	public boolean Niveau3() {
+		
+		boolean result;
+		if(priseBranche == true) {
+			hauteurEnM = (hauteurMaxEnM - hauteurMinEnM) / 1.5f; 
+			result = true;
+		}
+		else {
+			result = false;
+		}
+		return result;
+		
 	}
 	
 	public boolean descendreLeBureau(float hauteur) {

@@ -15,7 +15,15 @@ public class App {
 		boolean bureauDescendu = bureau3.descendreLeBureau(0.2f);
 		boolean priseBranche = bureau4.brancheLaPrise();
 		priseBranche = bureau5.debrancheLaPrise();
-		
+		priseBranche = bureau5.brancheLaPrise();
+		boolean niveau1 = bureau5.Niveau1();
+		boolean niveau2 = bureau5.Niveau2();
+		boolean niveau3 = bureau5.Niveau3();
+		priseBranche = bureau2.debrancheLaPrise();
+		priseBranche = bureau2.brancheLaPrise();
+		bureauMonte = bureau2.monterLeBureau(2);
+		bureauMonte = bureau2.monterLeBureau(0.5f);
+		niveau1 = bureau2.Niveau1();
 	}
 
 }
