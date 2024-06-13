@@ -1,6 +1,6 @@
 package voitureObjet;
 
-public class Voiture {
+public class Voiture extends Vehicule {
 	
 	private boolean porteConducteur;
 	private boolean phares;
