@@ -5,19 +5,22 @@ public class Voiture {
 	private boolean porteConducteur;
 	private boolean phares;
 	private boolean moteur;
+	private boolean eclairageInterieur;
 	private String marque;
 	
 	public Voiture() {
 		porteConducteur = false;
 		phares = false;
-		moteur = true;
+		moteur = false;
+		eclairageInterieur = false;
 		marque = "Renault";
 	}
 	
-	public Voiture (boolean _porteConducteur, boolean _phares, boolean _moteur, String _marque) {
+	public Voiture (boolean _porteConducteur, boolean _phares, boolean _moteur, boolean _eclairageInterieur, String _marque) {
 		this.porteConducteur = _porteConducteur;
 		this.phares = _phares;
 		this.moteur = _moteur;
+		this.eclairageInterieur = _eclairageInterieur;
 		this.marque = _marque;
 	}
 	
@@ -26,6 +29,7 @@ public class Voiture {
 		boolean result = false;
 		if(this.porteConducteur == false) {
 			this.porteConducteur = true;
+			this.eclairageInterieur = true;
 			result = true;
 		}
 		
@@ -37,6 +41,7 @@ public class Voiture {
 		boolean result = false;
 		if(this.porteConducteur == true) {
 			this.porteConducteur = false;
+			this.eclairageInterieur = false;
 			result = true;
 		}
 		
