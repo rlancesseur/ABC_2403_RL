@@ -10,14 +10,14 @@ public class App {
 		
 		boolean bureauMonte = bureauWafae.monterLeBureau(10);
 		bureauMonte = bureauWafae.descendreLeBureau(30);
-		boolean misALaHauteur = bureauWafae.MettreALaHauteur1();
-		misALaHauteur = bureauWafae.MettreALaHauteur2();
-		misALaHauteur = bureauWafae.MettreALaHauteur3();
+		boolean misALaHauteur = bureauWafae.mettreALaHauteur1();
+		misALaHauteur = bureauWafae.mettreALaHauteur2();
+		misALaHauteur = bureauWafae.mettreALaHauteur3();
 		boolean priseBranche = bureauWafae.brancheLaPrise();
 		priseBranche = bureauWafae.debrancheLaPrise();
 		bureauMonte = bureauWafae.monterLeBureau(10);
 		priseBranche = bureauWafae.brancheLaPrise();
-		misALaHauteur = bureauWafae.PositionnerALaHauteur(95);
+		misALaHauteur = bureauWafae.positionnerALaHauteur(95);
 
 	}
 

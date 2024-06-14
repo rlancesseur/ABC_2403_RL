@@ -45,7 +45,7 @@ public class BureauElectrique extends Bureau {
 	public boolean monterLeBureau(float hauteur) {
 		
 		boolean result;
-		if(hauteurEnCM + hauteur <= hauteurMaxEnCM && priseBranche == true) {
+		if(hauteurEnCM + hauteur <= hauteurMaxEnCM && hauteur > 0 && priseBranche == true) {
 			hauteurEnCM += hauteur;
 			result = true;
 		}
@@ -56,7 +56,7 @@ public class BureauElectrique extends Bureau {
 		return result;
 	}
 	
-	public boolean MettreALaHauteur1() {
+	public boolean mettreALaHauteur1() {
 		
 		boolean result;
 		if(priseBranche == true) {
@@ -70,7 +70,7 @@ public class BureauElectrique extends Bureau {
 		return result;
 	}
 	
-	public boolean MettreALaHauteur2() {
+	public boolean mettreALaHauteur2() {
 		
 		boolean result;
 		if(priseBranche == true) {
@@ -84,7 +84,7 @@ public class BureauElectrique extends Bureau {
 		return result;
 	}
 	
-	public boolean MettreALaHauteur3() {
+	public boolean mettreALaHauteur3() {
 		
 		boolean result = false;
 		if(priseBranche == true) {
@@ -106,7 +106,7 @@ public class BureauElectrique extends Bureau {
 		return result;
 	}
 	
-	public boolean PositionnerALaHauteur(float hauteur) {
+	public boolean positionnerALaHauteur(float hauteur) {
 		
 		boolean result = false;
 		if(priseBranche == true && hauteur > hauteurMinEnCM && hauteur < hauteurMaxEnCM) {
