@@ -2,24 +2,44 @@ package bureauErgonomique;
 
 public class BureauElectrique extends Bureau {
 	
-	private float hauteurMaxEnCM;
-	private float hauteurMinEnCM;
+	final private float hauteurMaxEnCM;
+	final private float hauteurMinEnCM;
 	private float hauteurEnCM;
 	private boolean priseBranche;
+	private float hauteur1EnCM;
+	private float hauteur2EnCM;
+	private float hauteur3EnCM;
 	
 	
 	public BureauElectrique() {
 		hauteurMaxEnCM = 120;
 		hauteurMinEnCM = 80;
-		hauteurEnCM = 100f;
+		hauteurEnCM = 100;
 		priseBranche = true;
+		hauteur1EnCM = 90;
+		hauteur2EnCM = 100;
+		hauteur3EnCM = 110;
 	}
 	
-	public BureauElectrique(float _hauteurMaxEnCM, float _hauteurMinEnCM, float _hauteur, boolean _priseBranche) {
+	public BureauElectrique(float _hauteurMaxEnCM, float _hauteurMinEnCM, float _hauteurEnCM, 
+			boolean _priseBranche, float _hauteur1EnCM, float _hauteur2EnCM, float _hauteur3EnCM) {
 		this.hauteurMaxEnCM = _hauteurMaxEnCM;
 		this.hauteurMinEnCM = _hauteurMinEnCM;
-		this.hauteurEnCM = _hauteur;
+		this.hauteurEnCM = _hauteurEnCM;
 		this.priseBranche = _priseBranche;
+		this.hauteur1EnCM = _hauteur1EnCM;
+		this.hauteur2EnCM = _hauteur2EnCM;
+		this.hauteur3EnCM = _hauteur3EnCM;
+	}
+	
+	public BureauElectrique(BureauElectrique _BureauElectriqueARecopier) {
+		this.hauteurMaxEnCM = _BureauElectriqueARecopier.hauteurMaxEnCM;
+		this.hauteurMinEnCM = _BureauElectriqueARecopier.hauteurMinEnCM;
+		this.hauteurEnCM = _BureauElectriqueARecopier.hauteurEnCM;
+		this.priseBranche = _BureauElectriqueARecopier.priseBranche;
+		this.hauteur1EnCM = _BureauElectriqueARecopier.hauteur1EnCM;
+		this.hauteur2EnCM = _BureauElectriqueARecopier.hauteur2EnCM;
+		this.hauteur3EnCM = _BureauElectriqueARecopier.hauteur3EnCM;
 	}
 	
 	public boolean monterLeBureau(float hauteur) {
@@ -36,11 +56,11 @@ public class BureauElectrique extends Bureau {
 		return result;
 	}
 	
-	public boolean Niveau1() {
+	public boolean MettreALaHauteur1() {
 		
 		boolean result;
 		if(priseBranche == true) {
-			hauteurEnCM = (hauteurMaxEnCM - hauteurMinEnCM) / 2.5f; 
+			hauteurEnCM = hauteur1EnCM; 
 			result = true;
 		}
 		else {
@@ -50,11 +70,11 @@ public class BureauElectrique extends Bureau {
 		return result;
 	}
 	
-	public boolean Niveau2() {
+	public boolean MettreALaHauteur2() {
 		
 		boolean result;
 		if(priseBranche == true) {
-			hauteurEnCM = (hauteurMaxEnCM - hauteurMinEnCM) / 2; 
+			hauteurEnCM = hauteur2EnCM; 
 			result = true;
 		}
 		else {
@@ -64,15 +84,12 @@ public class BureauElectrique extends Bureau {
 		return result;
 	}
 	
-	public boolean Niveau3() {
+	public boolean MettreALaHauteur3() {
 		
-		boolean result;
+		boolean result = false;
 		if(priseBranche == true) {
-			hauteurEnCM = (hauteurMaxEnCM - hauteurMinEnCM) / 1.5f; 
+			hauteurEnCM = hauteur3EnCM; 
 			result = true;
-		}
-		else {
-			result = false;
 		}
 		
 		return result;
@@ -80,13 +97,21 @@ public class BureauElectrique extends Bureau {
 	
 	public boolean descendreLeBureau(float hauteur) {
 		
-		boolean result;
+		boolean result = false;
 		if(hauteurEnCM - hauteur >= hauteurMinEnCM && priseBranche == true) {
 			hauteurEnCM -= hauteur;
 			result = true;
 		}
-		else {
-			result = false;
+		
+		return result;
+	}
+	
+	public boolean PositionnerALaHauteur(float hauteur) {
+		
+		boolean result = false;
+		if(priseBranche == true && hauteur > hauteurMinEnCM && hauteur < hauteurMaxEnCM) {
+			hauteurEnCM = hauteur;
+			result = true;
 		}
 		
 		return result;
