@@ -42,53 +42,12 @@ public class BureauElectrique extends Bureau {
 		this.hauteur3EnCM = _BureauElectriqueARecopier.hauteur3EnCM;
 	}
 	
+	
 	public boolean monterLeBureau(float hauteur) {
 		
-		boolean result;
+		boolean result = false;
 		if(hauteurEnCM + hauteur <= hauteurMaxEnCM && hauteur > 0 && priseBranche == true) {
 			hauteurEnCM += hauteur;
-			result = true;
-		}
-		else {
-			result = false;
-		}
-		
-		return result;
-	}
-	
-	public boolean mettreALaHauteur1() {
-		
-		boolean result;
-		if(priseBranche == true) {
-			hauteurEnCM = hauteur1EnCM; 
-			result = true;
-		}
-		else {
-			result = false;
-		}
-		
-		return result;
-	}
-	
-	public boolean mettreALaHauteur2() {
-		
-		boolean result;
-		if(priseBranche == true) {
-			hauteurEnCM = hauteur2EnCM; 
-			result = true;
-		}
-		else {
-			result = false;
-		}
-		
-		return result;
-	}
-	
-	public boolean mettreALaHauteur3() {
-		
-		boolean result = false;
-		if(priseBranche == true) {
-			hauteurEnCM = hauteur3EnCM; 
 			result = true;
 		}
 		
@@ -109,7 +68,7 @@ public class BureauElectrique extends Bureau {
 	public boolean positionnerALaHauteur(float hauteur) {
 		
 		boolean result = false;
-		if(priseBranche == true && hauteur > hauteurMinEnCM && hauteur < hauteurMaxEnCM) {
+		if(priseBranche == true && hauteur >= hauteurMinEnCM && hauteur <= hauteurMaxEnCM) {
 			hauteurEnCM = hauteur;
 			result = true;
 		}
@@ -117,15 +76,27 @@ public class BureauElectrique extends Bureau {
 		return result;
 	}
 	
+	public boolean mettreALaHauteur1() {
+		
+		return positionnerALaHauteur(hauteur1EnCM);
+	}
+	
+	public boolean mettreALaHauteur2() {
+		
+		return positionnerALaHauteur(hauteur2EnCM);
+	}
+	
+	public boolean mettreALaHauteur3() {
+		
+		return positionnerALaHauteur(hauteur3EnCM);
+	}	
+	
 	public boolean brancheLaPrise() {
 		
-		boolean result;
+		boolean result = false;
 		if(priseBranche == false) {
 			priseBranche = true;
 			result = true;
-		}
-		else {
-			result = false;
 		}
 		
 		return result;
@@ -133,13 +104,10 @@ public class BureauElectrique extends Bureau {
 	
 	public boolean debrancheLaPrise() {
 		
-		boolean result;
-		if(priseBranche = true) {
+		boolean result = false;
+		if(priseBranche == true) {
 			priseBranche = false;
 			result = true;
-		}
-		else {
-			result = false;
 		}
 		
 		return result;
