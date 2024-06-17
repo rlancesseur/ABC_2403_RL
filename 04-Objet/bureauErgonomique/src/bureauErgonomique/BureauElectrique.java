@@ -57,7 +57,7 @@ public class BureauElectrique extends Bureau {
 	public boolean descendreLeBureau(float hauteur) {
 		
 		boolean result = false;
-		if(hauteurEnCM - hauteur >= hauteurMinEnCM && priseBranche == true) {
+		if(hauteurEnCM - hauteur >= hauteurMinEnCM && hauteur > 0 && priseBranche == true) {
 			hauteurEnCM -= hauteur;
 			result = true;
 		}
@@ -114,3 +114,4 @@ public class BureauElectrique extends Bureau {
 	}
 
 }
+
