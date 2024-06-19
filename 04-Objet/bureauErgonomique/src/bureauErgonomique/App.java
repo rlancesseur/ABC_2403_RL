@@ -5,8 +5,8 @@ public class App {
 	public static void main(String[] args) {
 		
 		BureauElectrique bureau1 = new BureauElectrique();
-		BureauElectrique bureauWafae = new BureauElectrique(100, 64, 90, true, 75, 75, 100);
-		BureauElectrique bureauJP = new BureauElectrique(120, 70, 80, true, 70, 73, 110);
+		BureauElectrique bureauWafae = new BureauElectrique(100, 64, true, 75, 75, 100);
+		BureauElectrique bureauJP = new BureauElectrique(120, 70, true, 70, 73, 110);
 		
 		boolean bureauMonte = bureauWafae.monterLeBureau(10);
 		bureauMonte = bureauWafae.descendreLeBureau(30);
