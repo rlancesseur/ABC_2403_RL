@@ -1,5 +1,7 @@
 package bureauErgonomique;
 
+import java.math.BigDecimal;
+
 public class BureauElectrique extends Bureau {
 	
 	private static float _hauteurEnCM;
@@ -21,9 +23,9 @@ public class BureauElectrique extends Bureau {
 		hauteur3EnCM = 110;
 	}
 	
-	public BureauElectrique(float _hauteurMaxEnCM, float _hauteurMinEnCM,
+	public BureauElectrique(BigDecimal _hauteurEnCM, BigDecimal _largeurEnCM, BigDecimal _longueurEnCM, float _hauteurMaxEnCM, float _hauteurMinEnCM,
 			boolean _priseBranche, float _hauteur1EnCM, float _hauteur2EnCM, float _hauteur3EnCM) {
-		super();
+		super(BigDecimal _hauteurEnCM, BigDecimal _largeurEnCM, BigDecimal _longueurEnCM);
 		this.hauteurMaxEnCM = _hauteurMaxEnCM;
 		this.hauteurMinEnCM = _hauteurMinEnCM;
 		this.priseBranche = _priseBranche;

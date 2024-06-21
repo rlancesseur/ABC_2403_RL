@@ -1,22 +1,28 @@
 package bureauErgonomique;
 
+import java.math.BigDecimal;
+
 public class Bureau {
 	
-	private String matiere;
-	protected float hauteurEnCM;
+	protected BigDecimal hauteurEnCM;
+	protected BigDecimal largeurEnCM;
+	protected BigDecimal longueurEnCM;
 
+	
 	public Bureau() {
-		matiere = "Bois";
-		hauteurEnCM = 110;
+		hauteurEnCM = BigDecimal.valueOf(80);
+		largeurEnCM = BigDecimal.valueOf(100);
+		longueurEnCM = BigDecimal.valueOf(100);
 	}
 	
-	public Bureau(String _matiere, float _hauteurEnCM) {
-		this.matiere = _matiere;
+	public Bureau(BigDecimal _hauteurEnCM, BigDecimal _largeurEnCM, BigDecimal _longueurEnCM) {
+
 		this.hauteurEnCM = _hauteurEnCM;
+		this.largeurEnCM = _largeurEnCM;
 	}
 	
 	public Bureau(Bureau _BureauARecopier) {
-		this.matiere = _BureauARecopier.matiere;
+		
 		this.hauteurEnCM = _BureauARecopier.hauteurEnCM;
 	}
 	
