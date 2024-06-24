@@ -14,17 +14,27 @@ public class Bureau {
 	}
 	
 	public Bureau(float _hauteurEnCM, float _largeurEnCM, float _longueurEnCM) {
-
 		this.hauteurEnCM = _hauteurEnCM;
 		this.largeurEnCM = _largeurEnCM;
 		this.longueurEnCM = _longueurEnCM;
 	}
 	
 	public Bureau(Bureau _BureauARecopier) {
-		
 		this.hauteurEnCM = _BureauARecopier.hauteurEnCM;
 		this.largeurEnCM = _BureauARecopier.largeurEnCM;
 		this.longueurEnCM = _BureauARecopier.longueurEnCM;
+	}
+	
+	
+	public boolean positionnerALaHauteur(float hauteur) {
+		
+		boolean result = false;
+		if(hauteur > 0) {
+			hauteurEnCM = hauteur;
+			result = true;
+		}
+			
+		return result;
 	}
 	
 }
