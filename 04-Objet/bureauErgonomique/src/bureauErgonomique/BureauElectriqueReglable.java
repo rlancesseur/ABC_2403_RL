@@ -1,6 +1,6 @@
 package bureauErgonomique;
 
-public class BureauElectriqueReglable {
+public class BureauElectriqueReglable extends BureauElectrique {
 	
 	private float hauteur1EnCM;
 	private float hauteur2EnCM;
@@ -19,21 +19,10 @@ public class BureauElectriqueReglable {
 		super(_hauteurEnCM, _largeurEnCM, _longueurEnCM, _hauteurMaxEnCM, _hauteurMinEnCM, _priseBranche);
 		this.hauteur1EnCM = _hauteur1EnCM;
 		this.hauteur2EnCM = _hauteur2EnCM;
-		this.hauteur3EnCM = _hauteur2EnCM;
+		this.hauteur3EnCM = _hauteur3EnCM;
 	}
 	
-	
-	public boolean positionnerALaHauteur(float hauteur) {
-		
-		boolean result = false;
-		if(super.priseBranche == true && hauteur >= super.hauteurMinEnCM && hauteur <= super.hauteurMaxEnCM) {
-			super.hauteurEnCM = hauteur;
-			result = true;
-		}
-		
-		return result;
-	}
-	
+
 	public boolean mettreALaHauteur1() {
 		
 		return positionnerALaHauteur(hauteur1EnCM);
