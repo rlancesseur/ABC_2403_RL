@@ -57,8 +57,7 @@ public class BureauElectrique extends Bureau {
 		
 		boolean result = false;
 		if(priseBranche == true && hauteur >= hauteurMinEnCM && hauteur <= hauteurMaxEnCM) {
-			super.hauteurEnCM = hauteur;
-			result = true;
+			super.positionnerALaHauteur(hauteur);
 		}
 		
 		return result;
