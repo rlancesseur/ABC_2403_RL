@@ -1,6 +1,6 @@
 package snakeJeu;
 
-public class Corps {
+public class Corps extends Fenetre {
 	
 	
 
