@@ -19,6 +19,11 @@ public class App {
 
 	}
 
+	private static BigDecimal BigDecimal(int i) {
+		
+		return BigDecimal.valueOf(i);
+	}
+
 
 
 }
