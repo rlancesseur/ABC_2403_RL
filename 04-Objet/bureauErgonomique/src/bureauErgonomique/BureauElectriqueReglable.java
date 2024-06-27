@@ -22,6 +22,13 @@ public class BureauElectriqueReglable extends BureauElectrique {
 		this.hauteur3EnCM = _hauteur3EnCM;
 	}
 	
+	public BureauElectriqueReglable(BureauElectriqueReglable _BureauElectriqueReglableARecopier) {
+		super(_BureauElectriqueReglableARecopier);
+		this.hauteur1EnCM = _BureauElectriqueReglableARecopier.hauteur1EnCM;
+		this.hauteur2EnCM = _BureauElectriqueReglableARecopier.hauteur2EnCM;
+		this.hauteur3EnCM = _BureauElectriqueReglableARecopier.hauteur3EnCM;
+	}
+	
 
 	public boolean mettreALaHauteur1() {
 		

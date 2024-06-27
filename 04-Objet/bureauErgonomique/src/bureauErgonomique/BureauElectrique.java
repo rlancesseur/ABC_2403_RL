@@ -23,7 +23,7 @@ public class BureauElectrique extends Bureau {
 	}
 	
 	public BureauElectrique(BureauElectrique _BureauElectriqueARecopier) {
-		super();
+		super(_BureauElectriqueARecopier);
 		this.hauteurMaxEnCM = _BureauElectriqueARecopier.hauteurMaxEnCM;
 		this.hauteurMinEnCM = _BureauElectriqueARecopier.hauteurMinEnCM;
 		this.priseBranche = _BureauElectriqueARecopier.priseBranche;
