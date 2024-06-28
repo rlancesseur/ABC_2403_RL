@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.*;
 
-public class Jeu extends JPanel {
+public class Jeu extends JPanel implements ActionListener{
 	
 	private class Case {	
 		int x;
@@ -27,6 +27,8 @@ public class Jeu extends JPanel {
 	Case pomme;
 	Random random;
 	
+	Timer gameLoop;
+	
 	Jeu(int largeur, int hauteur) {
 		this.largeur = largeur;
 		this.hauteur = hauteur;
@@ -38,6 +40,9 @@ public class Jeu extends JPanel {
 		pomme = new Case(10, 10);
 		random = new Random();
 		placePomme();
+		
+		gameLoop = new Timer(100, this);
+		gameLoop.start();
 	}
 		
 	public void paintComponent(Graphics g) {
@@ -63,6 +68,11 @@ public class Jeu extends JPanel {
 	public void placePomme() {
 		pomme.x = random.nextInt(largeur/taille);
 		pomme.y = random.nextInt(hauteur/taille);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		repaint();		
 	}
 	
 }
