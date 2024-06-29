@@ -17,6 +17,7 @@ public class App extends JFrame {
 		Jeu jeu = new Jeu(600, 600);
 		frame.add(jeu);
 		frame.pack();
+		jeu.requestFocus();
 
 	}
 
