@@ -29,4 +29,15 @@ public class Bureau {
 		this.longueurEnCM = _BureauARecopier.longueurEnCM;
 	}
 	
+	public boolean positionnerALaHauteur(BigDecimal hauteur) {
+		
+		boolean result = false;
+		if(hauteur.compareTo(hauteur) <= 0) {
+			hauteurEnCM = hauteur;
+			result = true;
+		}
+		
+		return result;
+	}
+	
 }
