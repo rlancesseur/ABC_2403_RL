@@ -4,7 +4,10 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Snake jeu = new Snake()
+		int[][] fenetre = new int [20][20];
+		int[][] position = new int [1][1];
+		
+		Snake jeu = new Snake(fenetre, position, false, false);
 
 	}
 
