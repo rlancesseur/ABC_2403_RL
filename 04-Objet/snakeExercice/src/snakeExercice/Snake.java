@@ -2,10 +2,10 @@ package snakeExercice;
 
 public class Snake {
 	
-	int[][] fenetre;
-	int[][] position;
-	boolean collision;
-	boolean gameOver;
+	private int[][] fenetre;
+	private int[][] position;
+	private boolean collision;
+	private boolean gameOver;
 	
 	
 	public Snake() {
@@ -44,5 +44,18 @@ public class Snake {
 		}
 
 	}
+	
+	private void versLeHaut() {
+	}
+	
+	private void versLeBas() {
+	}
+	
+	private void versLaGauche() {
+	}
+	
+	private void versLaDroite() {
+	}
+	
 
 }
