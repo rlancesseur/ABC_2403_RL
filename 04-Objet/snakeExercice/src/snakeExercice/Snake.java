@@ -2,48 +2,34 @@ package snakeExercice;
 
 public class Snake {
 	
-	private int[][] fenetre;
+	private int nombreLignesHorizontales;
+	private int nombreLignesVerticales;
 	private int[][] position;
-	private boolean collision;
-	private boolean gameOver;
+	private int score;
 	
 	
 	public Snake() {
-		fenetre = new int[20][20];
+		nombreLignesHorizontales = 10;
+		nombreLignesVerticales = 10;
 		position = new int[1][1];
-		collision = false;
-		gameOver = false;
+		score = 0;
 	}
 	
-	public Snake(int[][] fenetre, int[][] position, boolean collision, boolean gameOver) {
-		this.fenetre = fenetre;
+	public Snake(int nombreLignesHorizontales, int nombreLignesVerticales, int[][] position, int score) {
+		this.nombreLignesHorizontales = nombreLignesHorizontales;
+		this.nombreLignesVerticales = nombreLignesVerticales;
 		this.position = position;
-		this.collision = collision;
-		this.gameOver = gameOver;
+		this.score = score;
 	}
 	
 	public Snake(Snake SnakeACopier) {
-		this.fenetre = SnakeACopier.fenetre;
+		this.nombreLignesHorizontales = SnakeACopier.nombreLignesHorizontales;
+		this.nombreLignesVerticales = SnakeACopier.nombreLignesVerticales;
 		this.position = SnakeACopier.position;
-		this.collision = SnakeACopier.collision;
-		this.gameOver = SnakeACopier.gameOver;
+		this.score = SnakeACopier.score;
 	}
 	
 	
-	private void estUneBordure(int[][] tableau) {
-
-		
-		for(int i = 0; i <= tableau[i][0] && i <= tableau[0][i]; i++) {
-			tableau[i][0] = 1;
-			tableau[0][i] = 1;
-		}
-		
-		for(int i = tableau.length; i >= tableau[i][0] && i >= tableau[0][i]; i-- ) {
-			tableau[i][0] = 1;
-			tableau[0][i] = 1;
-		}
-
-	}
 	
 	private void versLeHaut() {
 	}
