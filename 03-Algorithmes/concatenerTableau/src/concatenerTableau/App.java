@@ -6,15 +6,18 @@ public class App {
 		
 		String[] tab = {"Riri", "Fifi", "et", "Loulou"};
 		
-		concatener(tab);
+		System.out.println(concatener(tab));
 
 	}
 	
-	public static void concatener(String tableau[]) {
+	public static String concatener(String tableau[]) {
 		
+		String result = "";
 		for(int i = 0; i < tableau.length; i++) {
-			System.out.print(tableau[i] + " ");
+		result += tableau[i] + " ";
 		}
+
+		return result;
 	}
 
 }
