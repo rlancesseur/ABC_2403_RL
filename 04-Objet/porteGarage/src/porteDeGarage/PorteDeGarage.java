@@ -40,7 +40,7 @@ public class PorteDeGarage {
 	public boolean deverouiller() {
 		boolean result = false;
 		if(pourcentageDOuverture == 0 && estVerouille == true) {
-			estVerouille = true;
+			estVerouille = false;
 			result = true;
 		}
 		return result;

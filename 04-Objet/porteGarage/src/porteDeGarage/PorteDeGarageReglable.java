@@ -26,5 +26,17 @@ public class PorteDeGarageReglable extends PorteDeGarage {
 		this.hauteur2EnPourcentage = _PorteDeGarageReglableACopier.hauteur2EnPourcentage;
 		this.hauteur3EnPourcentage = _PorteDeGarageReglableACopier.hauteur3EnPourcentage;
 	}
+	
+	public void mettreALaHauteur1() {
+		pourcentageDOuverture = hauteur1EnPourcentage;
+	}
+	
+	public void mettreALaHauteur2() {
+		pourcentageDOuverture = hauteur2EnPourcentage;
+	}
+	
+	public void mettreALaHauteur3() {
+		pourcentageDOuverture = hauteur3EnPourcentage;
+	}
 
 }

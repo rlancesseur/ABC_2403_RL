@@ -17,8 +17,16 @@ public class App {
 		
 		boolean porteVerouille = porteDeGarageDeMarie.verouiller();
 		porteVerouille = porteDeGarageDeMarie.deverouiller();
+		boolean porteOuverte = porteDeGarageDeMarie.ouvrirALaHauteur(30);
+		porteOuverte = porteDeGarageDeMarie.ouvrirALaHauteur(101);
+		porteOuverte = porteDeGarageDeMarie.ouvrirALaHauteur(80);
+		porteFerme = porteDeGarageDeMarie.fermerALaHauteur(12);
 		
 		
+		PorteDeGarageReglable porteDeToto = new PorteDeGarageReglable(false, 40, 0, 100, 20, 50, 80);
+		porteDeToto.mettreALaHauteur1();
+		porteDeToto.mettreALaHauteur2();
+		porteDeToto.mettreALaHauteur3();
 
 	}
 
