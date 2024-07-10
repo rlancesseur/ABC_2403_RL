@@ -425,3 +425,81 @@ FIN POUR
 POUR i de 0 à alphabet.length; i++
 ECRIRE ("La lettre " + alphabet[i] + " apparait " + compteur[i] + " fois dans le texte.")
 ```
+
+# Exercice 5.4 : Tri d'un tableau
+
+Nous désignerons par a1, a2, …, aN les éléments d’un tableau à trier par ordre croissant.
+Exemple: [128, 64, 8, 512, 16, 32, 256]
+On commence par chercher l’indice du plus petit des éléments, soit j cet indice.
+On permute alors les valeurs de a1 (128) et aj (8).
+Le tableau devient [8, 64, 128, 512, 16, 32, 256].
+On cherche ensuite l’indice du plus petit des éléments entre a2 et aN et on permute avec a2.
+Le tableau devient [8, 16, 128, 512, 64, 32, 256].
+On cherche ensuite l’indice du plus petit des éléments a3, a4, …, aN etc…
+
+```
+VARIABLES
+
+TRAITEMENT
+
+```
+
+# Exercice 5.5 : Palindrome
+
+L’utilisateur saisit une chaîne de caractères terminée par un point . (à contrôler).
+Ecrivez l’algorithme et le programme permettant d’affirmer si cette phrase est ou non un palindrome.
+Si la chaîne de caractères n’est composée que du caractère ‘.’, l’utilisateur est invité à recommencer.
+L’algorithme doit prévoir les 3 cas suivants :
+
+la phrase est vide
+la chaîne de caractères n’est pas un palindrome
+la chaîne de caractères est un palindrome
+
+```
+VARIABLES
+
+saisieUtilisateur est un STRING
+palindrome est un boolean
+
+TRAITEMENT
+
+FAIRE
+    ECRIRE "Saisissez une chaîne de caractères : "
+    LIRE saisieUtilisateur
+
+        SI (saisieUtilisateur.length() < 1) 
+         ECRIRE "La phrase est vide."
+        FIN SI
+    
+TANT QUE (!saisieUtilisateur.contains(".") || saisieUtilisateur.contains(".") && saisieUtilisateur.length() < 2 )
+
+palindrome = estUnPalindrome(saisieUtilisateur)
+
+SI (palindrome)
+    ECRIRE "La chaîne de caractères est un palindrome."
+
+    SINON
+    ECRIRE "La chaîne de caractères n'est pas un palindrome."
+FIN SI
+
+
+estUnPalindrome(String saisieUtilisateur) est une FONCTION qui retourne un boolean
+
+String tableau[] = saisieUtilisateur.split("")
+		int i = 0
+		int j = tableau.length - 2
+		
+		TANT QUE i plus petit que j 
+			
+			SI !tableau[i].contains(tableau[j])
+				RETOURNER false
+            FIN SI
+							
+			i ++
+			j--
+		
+		RETOURNER true
+
+```
+
+        
