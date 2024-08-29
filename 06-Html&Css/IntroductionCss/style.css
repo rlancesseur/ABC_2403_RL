@@ -1,0 +1,33 @@
+body
+{
+    background-color: #7D8CC4;
+    font-family: Verdana;
+    text-align: center;
+}
+
+main
+{
+    background-color: white;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    padding: 10px;
+}
+
+footer
+{
+    color: #A0D2DB;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+
+h1, h2
+{
+    color: #726DA8;
+}
+
+p, ol
+{
+    color: #B8336A;
+}
