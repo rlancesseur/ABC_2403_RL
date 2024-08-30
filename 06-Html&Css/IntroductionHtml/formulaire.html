@@ -5,6 +5,7 @@
     <head>
         <meta charset="utf-8">
         <title>Mon 1er formulaire</title>
+        <link href="style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -15,12 +16,13 @@
 
         <form method="get" action="">
 
+            <div id="bloc">
             <fieldset>
                 <legend>Etat civil</legend>
                 <label for="Nom">Nom : </label>
-                <input type="text" name="Nom" id="Nom">
+                <input type="text" name="Nom" id="Nom" autofocus>
 
-                <br />
+                <br>
 
                 <label for="Prenom">Prénom : </label>
                 <input type="text" name="Prenom" id="Prenom">
@@ -30,7 +32,9 @@
                 <label for="Date">Date de naissance : </label>
                 <input type="date" name="Date" id="Date">
             </fieldset>
+            </div>
 
+            <div id="bloc">
             <fieldset>
                 <legend>Informations de contact</legend>
                 <label for="Email">Adresse Email : </label>
@@ -41,15 +45,18 @@
                 <label for="Tel">Téléphone : </label>
                 <input type ="tel" name="Tel" id="Tel">
             </fieldset>
+            </div>
 
+            <div id="bloc">
             <fieldset>
-                <input type="checkbox" name="conditions" id="conditions">
+                <input type="checkbox" name="conditions" id="conditions" required>
                 <label for="conditions">J'accepte les <a href="tableau.html">conditions d'utilisation</a></label>
 
                 <br>
 
                 <button type="submit">S'inscrire</button>
             </fieldset>
+            </div>
 
         </form>
 
