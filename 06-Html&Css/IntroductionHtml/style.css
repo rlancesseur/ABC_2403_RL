@@ -1,0 +1,29 @@
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset
+{
+    width: 50%;
+    background-color: rgb(255, 227, 175);
+    padding: 10px;
+    border: 2px dotted;
+    border-radius: 0px 0px 20px 0px;
+}
+
+h1
+{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+legend
+{
+    font-weight: bold;
+}
+
+#bloc 
+{
+    padding-bottom: 10px;
+}
