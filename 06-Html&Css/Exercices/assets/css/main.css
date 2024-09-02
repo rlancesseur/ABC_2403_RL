@@ -1,0 +1,55 @@
+body
+{
+    background-color: #222222;
+    color: #FFFFFF;
+    font-family: Verdana;
+}
+
+header
+{
+    display: flex;
+    background-color: #224422;
+    justify-content: space-between;
+}
+
+.actu
+{
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2
+{
+    color: #CCFFCC;
+}
+
+a
+{
+    color: #CCCCFF;
+}
+
+footer
+{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.logo
+{
+    width: 100px;
+}
+
+.avion
+{
+    width: 230px;
+    height: 150px;
+}
+
+.galerie
+{
+    margin: auto;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
