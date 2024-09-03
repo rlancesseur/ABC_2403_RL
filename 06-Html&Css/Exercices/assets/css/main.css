@@ -53,3 +53,37 @@ footer
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+li
+{
+    background-color: #376137;
+    margin: 2px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+li:hover
+{
+    background-color: #508a50;
+}
+
+table
+{
+    border-style: solid;
+    color: black;
+}
+
+.ligneA
+{
+    background-color: rgb(153, 153, 153);
+}
+
+.ligneB
+{
+    background-color: white;
+}
+
+
+
+
+
