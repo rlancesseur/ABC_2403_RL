@@ -1,5 +1,5 @@
-# Formation ABC de Rémi
+# Formation Préqualifiante
 
-Début : 25/03/2024
+L'ensemble des mes exercices de la formation préqualifiante Développeur Web et Web Mobile.
 
-Fin : 06/09/2024
+Formation réalisée entre le 25/03/2024 et le 06/09/2024.
